@@ -3,335 +3,1063 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kế hoạch Marketing DKRA Hiệp Phước Premia</title>
-  <meta name="description" content="Kế hoạch marketing chi tiết bằng tiếng Việt cho DKRA Hiệp Phước Premia, xây dựng từ bộ source content chính thức." />
+  <title>Marketing Plan V2 — DKRA Hiệp Phước Premia</title>
+  <meta name="description" content="Kế hoạch marketing chi tiết V2 cho DKRA Hiệp Phước Premia — lịch nội dung 30 ngày, mẫu caption, checklist triển khai." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <style>
+:root {
+  --bg: #0d1117;
+  --panel: rgba(255,255,255,0.06);
+  --panel-strong: rgba(255,255,255,0.1);
+  --text: #eff4fb;
+  --muted: #b2bfd1;
+  --line: rgba(255,255,255,0.12);
+  --gold: #f3c56b;
+  --blue: #79b8ff;
+  --green: #7ee787;
+  --red: #f97583;
+  --accent: linear-gradient(135deg, #1f6feb 0%, #6ea8fe 38%, #f3c56b 100%);
+  --radius: 24px;
+  --shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(31,111,235,0.22), transparent 28%),
+    radial-gradient(circle at top right, rgba(243,197,107,0.16), transparent 28%),
+    linear-gradient(180deg, #08111f 0%, #0d1117 100%);
+  color: var(--text);
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1200px, calc(100% - 32px)); margin: 0 auto; }
+.section { padding: 80px 0; }
+.section.alt { background: rgba(255,255,255,0.025); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-head { max-width: 760px; margin-bottom: 34px; }
+.section-head h2 { margin: 8px 0 12px; font-size: clamp(28px, 4vw, 48px); line-height: 1.05; }
+.section-head p { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.eyebrow, .kicker {
+  display: inline-block; padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.16); border-radius: 999px;
+  color: var(--gold); font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+}
+.hero { padding: 72px 0 56px; }
+.hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 28px; align-items: stretch; }
+.hero-copy h1 { margin: 14px 0 16px; font-size: clamp(36px, 5.5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; }
+.lede { color: var(--muted); font-size: 17px; line-height: 1.8; max-width: 760px; }
+.hero-actions { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 50px; padding: 0 20px; border-radius: 999px; font-weight: 700;
+  border: 1px solid transparent; transition: .2s ease; cursor: pointer;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: #08111f; }
+.btn-secondary { border-color: var(--line); background: rgba(255,255,255,0.05); }
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border: 1px solid var(--line); backdrop-filter: blur(16px);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.hero-card { padding: 28px; }
+.hero-card h3 { margin-top: 0; font-size: 20px; }
+.hero-card ul { margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.9; }
+.pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+.pill-row span {
+  border: 1px solid var(--line); color: var(--blue); padding: 10px 14px; border-radius: 999px;
+  background: rgba(121,184,255,0.08); font-size: 14px; font-weight: 600;
+}
+.card-grid { display: grid; gap: 18px; }
+.card-grid.two { grid-template-columns: repeat(2, 1fr); }
+.card-grid.three { grid-template-columns: repeat(3, 1fr); }
+.card-grid.four { grid-template-columns: repeat(4, 1fr); }
+.info-card, .day-card {
+  background: rgba(255,255,255,0.04); border: 1px solid var(--line);
+  border-radius: 22px; box-shadow: var(--shadow); padding: 26px;
+}
+.info-card h3 { margin: 0 0 10px; font-size: 22px; }
+.info-card p { color: var(--muted); line-height: 1.75; margin: 0 0 14px; }
+.info-card ul { margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.8; }
+.tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
+.tag-awareness { background: rgba(121,184,255,0.15); color: var(--blue); }
+.tag-trust { background: rgba(126,231,135,0.15); color: var(--green); }
+.tag-convert { background: rgba(243,197,107,0.15); color: var(--gold); }
+.tag-visual { background: rgba(249,117,131,0.15); color: var(--red); }
+
+/* Calendar */
+.week-block { margin-bottom: 40px; }
+.week-block h3 { font-size: 24px; margin-bottom: 16px; color: var(--gold); }
+.day-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
+.day-card { padding: 16px; min-height: 160px; }
+.day-card .day-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 6px; }
+.day-card .day-num { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+.day-card .day-content { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.day-card .day-content strong { color: var(--text); display: block; margin-bottom: 4px; }
+
+/* Caption template */
+.caption-block {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--line);
+  border-radius: 16px; padding: 24px; margin-bottom: 18px;
+}
+.caption-block h4 { margin: 0 0 8px; color: var(--gold); font-size: 16px; }
+.caption-block .caption-text {
+  font-size: 15px; line-height: 1.8; color: var(--muted);
+  white-space: pre-line; padding: 16px; background: rgba(0,0,0,0.3);
+  border-radius: 12px; margin-top: 12px;
+}
+
+/* Checklist */
+.checklist { list-style: none; padding: 0; margin: 0; }
+.checklist li {
+  padding: 14px 20px; border-bottom: 1px solid var(--line);
+  display: flex; align-items: flex-start; gap: 12px; line-height: 1.6;
+}
+.checklist li::before {
+  content: ""; width: 20px; height: 20px; border: 2px solid var(--line);
+  border-radius: 6px; flex-shrink: 0; margin-top: 2px;
+}
+
+/* Phase bar */
+.phase-bar { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 2px; margin-bottom: 28px; }
+.phase-seg {
+  padding: 18px 20px; text-align: center; font-weight: 700; font-size: 14px;
+  border-radius: 14px;
+}
+.phase-seg.p1 { background: rgba(121,184,255,0.15); color: var(--blue); }
+.phase-seg.p2 { background: rgba(126,231,135,0.12); color: var(--green); }
+.phase-seg.p3 { background: rgba(243,197,107,0.15); color: var(--gold); }
+
+/* Timeline */
+.timeline { display: grid; gap: 14px; }
+.timeline-item {
+  display: grid; grid-template-columns: 72px 1fr; gap: 18px; align-items: start;
+  padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,0.04);
+}
+.timeline-item span {
+  width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%;
+  background: rgba(121,184,255,0.12); color: var(--blue); font-weight: 800;
+}
+.timeline-item h3 { margin: 4px 0 8px; font-size: 22px; }
+.timeline-item p { margin: 0; color: var(--muted); line-height: 1.7; }
+
+.footer { border-top: 1px solid var(--line); padding: 26px 0 44px; }
+.footer-wrap { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); }
+.footer strong { display: block; color: var(--text); margin-bottom: 8px; }
+
+.toc { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.toc a {
+  padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px;
+  font-size: 13px; font-weight: 600; transition: .2s;
+}
+.toc a:hover { background: rgba(255,255,255,0.08); }
+
+@media (max-width: 980px) {
+  .hero-grid, .card-grid.two, .card-grid.three, .card-grid.four, .day-grid, .phase-bar {
+    grid-template-columns: 1fr;
+  }
+  .hero { padding-top: 48px; }
+  .footer-wrap { flex-direction: column; }
+}
+  </style>
 </head>
 <body>
   <div class="page-shell">
     <header class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="kicker">BẢN TRÌNH BÀY NỘI BỘ</span>
-          <h1>Kế hoạch Marketing<br/>DKRA Hiệp Phước Premia</h1>
+          <span class="kicker">V2 — Chi Tiet & Hanh Dong</span>
+          <h1>Marketing Plan V2<br/>Hiep Phuoc Premia</h1>
           <p class="lede">
-            Bản kế hoạch này được xây trực tiếp từ bộ source content chính thức của dự án:
-            tổng quan dự án, thông tin thị trường, kế hoạch kinh doanh, pháp lý, hình ảnh, phim dự án và tài liệu thiết kế.
-            Mục tiêu là để team có một plan cụ thể, dễ triển khai và dùng chung một chuẩn nội dung.
+            Ban ke hoach nay duoc xay dung truc tiep tu bo source chinh thuc cua du an,
+            bao gom lich noi dung 30 ngay cu the, mau caption san, checklist trien khai,
+            va huong dan chi tiet cho tung loai bai dang.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#muc-tieu">Xem kế hoạch</a>
-            <a class="btn btn-secondary" href="#lich-trien-khai">Lịch triển khai 30 ngày</a>
+            <a class="btn btn-primary" href="#calendar">Lich noi dung 30 ngay</a>
+            <a class="btn btn-secondary" href="#templates">Mau caption san</a>
+          </div>
+          <div class="toc">
+            <a href="#strategy">Chien luoc</a>
+            <a href="#audience">Doi tuong</a>
+            <a href="#pillars">Tru cot</a>
+            <a href="#calendar">Lich 30 ngay</a>
+            <a href="#templates">Mau caption</a>
+            <a href="#channels">Kenh</a>
+            <a href="#checklist">Checklist</a>
+            <a href="#kpi">KPI</a>
+            <a href="#rules">Quy tac</a>
           </div>
         </div>
         <div class="hero-card glass">
-          <h3>Nguyên tắc nền</h3>
+          <h3>Thay doi so voi V1</h3>
           <ul>
-            <li>Chỉ dùng nội dung từ bộ tài liệu chính thức</li>
-            <li>Không tự bịa claim đầu tư, ưu đãi, pháp lý</li>
-            <li>Nội dung phải vừa tăng nhận diện vừa tạo lead</li>
-            <li>Visual ưu tiên ảnh dự án, ảnh sự kiện, phim dự án</li>
+            <li>Lich noi dung cu the tung ngay trong 30 ngay</li>
+            <li>Mau caption san cho 8 loai bai</li>
+            <li>Checklist trien khai theo tuan</li>
+            <li>Huong dan chon anh/video cu the</li>
+            <li>Ma tran noi dung x kenh x muc tieu</li>
           </ul>
           <div class="pill-row">
-            <span>Nhận diện</span>
-            <span>Niềm tin</span>
-            <span>Chuyển đổi</span>
+            <span>30 ngay</span>
+            <span>8 mau caption</span>
+            <span>3 giai doan</span>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="section" id="muc-tieu">
+      <!-- STRATEGY -->
+      <section class="section" id="strategy">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">1. Mục tiêu</span>
-            <h2>Mục tiêu marketing cụ thể</h2>
+            <span class="eyebrow">1. Chien luoc tong</span>
+            <h2>3 giai doan chien luoc</h2>
             <p>
-              Kế hoạch này không chỉ để “đăng bài cho có”. Mục tiêu là tạo ra một hệ thống nội dung đủ rõ để
-              đội marketing, sales và quản lý đều hiểu: đăng gì, đăng để làm gì, và từng nhóm nội dung sẽ kéo khách đi theo hành trình nào.
+              Ke hoach chia thanh 3 giai doan ro rang. Moi giai doan co muc tieu rieng,
+              loai noi dung rieng, va chi so do luong rieng. Khong lam tat ca cung luc.
             </p>
           </div>
-          <div class="stats-grid">
-            <article class="stat-card"><strong>01</strong><span>Tăng nhận diện tên dự án</span></article>
-            <article class="stat-card"><strong>02</strong><span>Tăng mức độ tin tưởng</span></article>
-            <article class="stat-card"><strong>03</strong><span>Tạo nhu cầu inbox/tư vấn</span></article>
-            <article class="stat-card"><strong>04</strong><span>Hỗ trợ sales chốt khách</span></article>
+
+          <div class="phase-bar">
+            <div class="phase-seg p1">Tuan 1<br/>Nhan dien</div>
+            <div class="phase-seg p2">Tuan 2-3<br/>Thuyet phuc</div>
+            <div class="phase-seg p3">Tuan 4<br/>Chuyen doi</div>
+          </div>
+
+          <div class="card-grid three">
+            <article class="info-card">
+              <span class="tag tag-awareness">Giai doan 1</span>
+              <h3>Mo nhan dien</h3>
+              <p>Lam cho nguoi xem nho ten du an, nhan dien hinh anh, biet du an dang duoc trien khai bai ban.</p>
+              <ul>
+                <li>Bai gioi thieu tong quan du an</li>
+                <li>Anh du an dep, dong bo brand</li>
+                <li>Video teaser ngan tu phim du an</li>
+                <li>Bai "vi sao nen biet den du an nay"</li>
+              </ul>
+              <p style="margin-top:12px"><strong>Source:</strong> Tong quan du an + Hinh anh du an + Phim du an</p>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-trust">Giai doan 2</span>
+              <h3>Dao sau thuyet phuc</h3>
+              <p>Tra loi cau hoi cua khach, tao ly do quan tam, nang do nghiem tuc cua lead.</p>
+              <ul>
+                <li>Bai phan tich thi truong/khu vuc</li>
+                <li>Bai ve mat bang/to roi/tai lieu</li>
+                <li>Bai chinh sach ban hang</li>
+                <li>Carousel anh + thong tin</li>
+                <li>Video voiceover hoac text motion</li>
+              </ul>
+              <p style="margin-top:12px"><strong>Source:</strong> Thong tin thi truong + Ke hoach kinh doanh + MKT tai lieu</p>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-convert">Giai doan 3</span>
+              <h3>Chot chuyen doi</h3>
+              <p>Day khach vao inbox, tu van truc tiep hoac sales follow-up.</p>
+              <ul>
+                <li>Bai CTA nhan full file / chinh sach</li>
+                <li>Bai phap ly tao an tam</li>
+                <li>Bai su kien / social proof</li>
+                <li>Reel recap</li>
+                <li>Bai "neu can tu van thi inbox ngay"</li>
+              </ul>
+              <p style="margin-top:12px"><strong>Source:</strong> Phap ly du an + Hinh anh su kien + Ke hoach kinh doanh</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt" id="dinh-huong">
+      <!-- AUDIENCE -->
+      <section class="section alt" id="audience">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">2. Định hướng</span>
-            <h2>Định hướng truyền thông chính</h2>
-            <p>
-              Hiệp Phước Premia nên được truyền thông theo hướng một dự án có tài liệu rõ, hình ảnh mạnh, pháp lý đủ để tạo niềm tin,
-              và có câu chuyện thị trường đủ tốt để giữ sự quan tâm. Không đi theo kiểu spam chào bán quá sớm.
-            </p>
+            <span class="eyebrow">2. Doi tuong</span>
+            <h2>3 nhom khach hang chinh</h2>
           </div>
           <div class="card-grid three">
             <article class="info-card">
-              <div class="num">A</div>
-              <h3>Giai đoạn nhận diện</h3>
-              <p>Làm cho người xem nhớ tên dự án, nhận diện được hình ảnh, và biết dự án đang được triển khai bài bản.</p>
+              <h3>Nguoi mua de o</h3>
+              <p>Quan tam: chat luong song, quy hoach, hinh anh du an, cam giac an tam, logic an cu lau dai.</p>
               <ul>
-                <li>Bài giới thiệu tổng quan</li>
-                <li>Ảnh dự án đẹp, đồng bộ brand</li>
-                <li>Video teaser ngắn từ phim dự án</li>
+                <li><strong>Hook:</strong> "Du an nay danh cho ai muon o that?"</li>
+                <li><strong>Noi dung manh:</strong> tong quan, hinh anh, mat bang</li>
+                <li><strong>Kenh tot:</strong> Facebook, carousel, video ngoi nha</li>
               </ul>
             </article>
             <article class="info-card">
-              <div class="num">B</div>
-              <h3>Giai đoạn thuyết phục</h3>
-              <p>Trả lời rõ các câu hỏi: dự án này là gì, vị trí/khu vực ra sao, có điểm gì đáng chú ý, phù hợp ai.</p>
+              <h3>Nha dau tu</h3>
+              <p>Quan tam: thong tin thi truong, khu vuc, ha tang, kha nang khai thac, thoi diem xuong tien.</p>
               <ul>
-                <li>Bài phân tích thị trường</li>
-                <li>Bài giải thích mặt bằng/tài liệu</li>
-                <li>Bài chính sách bán hàng nếu cần bán</li>
+                <li><strong>Hook:</strong> "Vi sao thoi diem nay dang theo doi?"</li>
+                <li><strong>Noi dung manh:</strong> thi truong, chinh sach, phap ly</li>
+                <li><strong>Kenh tot:</strong> Facebook, Zalo group, tu van 1-1</li>
               </ul>
             </article>
             <article class="info-card">
-              <div class="num">C</div>
-              <h3>Giai đoạn chuyển đổi</h3>
-              <p>Dùng pháp lý, social proof, chính sách và CTA trực tiếp để đẩy khách vào inbox hoặc gặp sales.</p>
+              <h3>Sales / moi gioi</h3>
+              <p>Quan tam: do de tu van — bo tai lieu ro, hinh anh dep, phap ly du, policy de noi lai cho khach.</p>
               <ul>
-                <li>Bài pháp lý tạo an tâm</li>
-                <li>Bài sự kiện / hoạt động thực tế</li>
-                <li>Bài CTA nhận file / tư vấn / booking</li>
+                <li><strong>Hook:</strong> "Bo cong cu de tu van nhanh hon"</li>
+                <li><strong>Noi dung manh:</strong> to roi, standee, chinh sach, phap ly</li>
+                <li><strong>Kenh tot:</strong> Zalo noi bo, email, file PDF</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="khach-hang">
+      <!-- CONTENT PILLARS -->
+      <section class="section" id="pillars">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">3. Khách hàng mục tiêu</span>
-            <h2>3 nhóm khách hàng chính</h2>
-          </div>
-          <div class="card-grid three">
-            <article class="info-card compact">
-              <h3>Nhóm 1 — Người mua để ở</h3>
-              <p>Tập trung vào chất lượng sống, quy hoạch, hình ảnh dự án, cảm giác an tâm, và logic an cư lâu dài.</p>
-              <ul>
-                <li>Hook: “Dự án này dành cho ai muốn ở thật?”</li>
-                <li>Nội dung mạnh: tổng quan, hình ảnh, mặt bằng</li>
-              </ul>
-            </article>
-            <article class="info-card compact">
-              <h3>Nhóm 2 — Nhà đầu tư</h3>
-              <p>Tập trung vào thông tin thị trường, khu vực, hạ tầng, khả năng khai thác và thời điểm xuống tiền.</p>
-              <ul>
-                <li>Hook: “Vì sao thời điểm này đáng theo dõi?”</li>
-                <li>Nội dung mạnh: thị trường, chính sách, pháp lý</li>
-              </ul>
-            </article>
-            <article class="info-card compact">
-              <h3>Nhóm 3 — Sales / môi giới</h3>
-              <p>Tập trung vào độ dễ tư vấn: bộ tài liệu rõ, hình ảnh đẹp, pháp lý đủ, policy dễ nói lại cho khách.</p>
-              <ul>
-                <li>Hook: “Bộ công cụ để tư vấn nhanh hơn”</li>
-                <li>Nội dung mạnh: tờ rơi, standee, chính sách, pháp lý</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="thong-diep">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">4. Trụ cột nội dung</span>
-            <h2>5 trụ cột thông điệp cần bám</h2>
-          </div>
-          <div class="timeline">
-            <div class="timeline-item"><span>01</span><div><h3>Giới thiệu dự án</h3><p>Dùng cho bài mở đầu, bài giới thiệu nhanh, bài “đây là dự án gì”, bài hero branding.</p></div></div>
-            <div class="timeline-item"><span>02</span><div><h3>Thị trường & khu vực</h3><p>Dùng cho bài phân tích tiềm năng khu vực, bài why-now, bài dành cho khách thiên về đầu tư.</p></div></div>
-            <div class="timeline-item"><span>03</span><div><h3>Niềm tin & pháp lý</h3><p>Dùng để giảm nghi ngại, trả lời lo lắng, củng cố cảm giác “dự án có hồ sơ rõ ràng”.</p></div></div>
-            <div class="timeline-item"><span>04</span><div><h3>Chính sách & hành động</h3><p>Dùng cho các bài kéo khách vào tư vấn: nhận file, hỏi giá, xem chính sách, đặt lịch hẹn.</p></div></div>
-            <div class="timeline-item"><span>05</span><div><h3>Hình ảnh & trải nghiệm</h3><p>Dùng cho ảnh đẹp, reel ngắn, carousel, bài mang tính gợi cảm hứng và ghi nhớ dự án.</p></div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="kenh-noi-dung">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">5. Chiến lược kênh</span>
-            <h2>Dùng nội dung nào cho từng loại kênh</h2>
+            <span class="eyebrow">3. Tru cot noi dung</span>
+            <h2>6 loai bai dang chinh</h2>
+            <p>Moi bai dang phai thuoc 1 trong 6 loai nay. Moi loai co muc tieu ro, source cu the, va tan suat khuyen nghi.</p>
           </div>
           <div class="card-grid three">
             <article class="info-card">
-              <h3>Facebook / fanpage</h3>
-              <p>Kênh để xây nhận diện và kéo inbox.</p>
+              <span class="tag tag-awareness">Nhan dien</span>
+              <h3>A. Gioi thieu du an</h3>
+              <p>Bai hero, bai tong quan, bai "du an nay la gi".</p>
               <ul>
-                <li>Ưu tiên: carousel, ảnh dự án, bài tổng quan, bài thị trường</li>
-                <li>Tần suất: 1–2 bài/ngày nếu đủ asset</li>
-                <li>CTA: inbox nhận file, nhận pháp lý, nhận chính sách</li>
+                <li><strong>Source:</strong> Tong quan du an PDF</li>
+                <li><strong>Visual:</strong> Hinh anh du an (1-10.jpg)</li>
+                <li><strong>Tan suat:</strong> 2 bai/tuan</li>
               </ul>
             </article>
             <article class="info-card">
-              <h3>Reels / TikTok / video ngắn</h3>
-              <p>Kênh để dừng scroll và tạo cảm xúc nhanh.</p>
+              <span class="tag tag-awareness">Nhan dien</span>
+              <h3>B. Thi truong & khu vuc</h3>
+              <p>Bai phan tich tiem nang khu vuc, why-now, goc dau tu.</p>
               <ul>
-                <li>Ưu tiên: cắt từ phim dự án, ảnh ghép motion, hook ngắn</li>
-                <li>Tần suất: 3–4 video/tuần</li>
-                <li>CTA: comment/inbox để lấy bộ tài liệu</li>
+                <li><strong>Source:</strong> Thong tin thi truong PDF</li>
+                <li><strong>Visual:</strong> Hinh anh du an (goc rong, ban do)</li>
+                <li><strong>Tan suat:</strong> 2 bai/tuan</li>
               </ul>
             </article>
             <article class="info-card">
-              <h3>Sales enablement</h3>
-              <p>Kênh nội bộ hoặc nhóm sales để thống nhất cách tư vấn.</p>
+              <span class="tag tag-trust">Niem tin</span>
+              <h3>C. Phap ly & trust</h3>
+              <p>Giam nghi ngai, tra loi lo lang, cung co cam giac du an co ho so ro rang.</p>
               <ul>
-                <li>Ưu tiên: tờ rơi, standee, chính sách, pháp lý</li>
-                <li>Mục tiêu: để sales nói cùng một thông điệp</li>
-                <li>CTA: dùng làm file gửi khách 1-1</li>
+                <li><strong>Source:</strong> Phap ly du an (GPXD, QD, GCN)</li>
+                <li><strong>Visual:</strong> Crop anh giay phep, overlay brand</li>
+                <li><strong>Tan suat:</strong> 1 bai/tuan</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-convert">Chuyen doi</span>
+              <h3>D. Chinh sach & CTA</h3>
+              <p>Bai keo khach vao tu van: nhan file, hoi gia, xem chinh sach, dat lich hen.</p>
+              <ul>
+                <li><strong>Source:</strong> Ke hoach kinh doanh PDF</li>
+                <li><strong>Visual:</strong> Standee, to roi, branded cards</li>
+                <li><strong>Tan suat:</strong> 1 bai/tuan</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-visual">Visual</span>
+              <h3>E. Hinh anh & video</h3>
+              <p>Anh dep, reel ngan, carousel, bai mang tinh goi cam hung.</p>
+              <ul>
+                <li><strong>Source:</strong> Hinh anh du an + Phim du an</li>
+                <li><strong>Visual:</strong> Best-of anh (18, 26, 33, 48 — dem/chieu)</li>
+                <li><strong>Tan suat:</strong> 2-3 bai/tuan</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-trust">Social proof</span>
+              <h3>F. Su kien & hoat dong</h3>
+              <p>Launch recap, social proof, bai tao do nong thi truong.</p>
+              <ul>
+                <li><strong>Source:</strong> Hinh anh su kien</li>
+                <li><strong>Visual:</strong> Anh su kien, team, khach hang</li>
+                <li><strong>Tan suat:</strong> 1 bai/tuan (khi co su kien)</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt" id="lich-trien-khai">
+      <!-- 30-DAY CALENDAR -->
+      <section class="section alt" id="calendar">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">6. Lịch triển khai</span>
-            <h2>Kế hoạch triển khai 30 ngày</h2>
+            <span class="eyebrow">4. Lich noi dung</span>
+            <h2>Lich noi dung chi tiet 30 ngay</h2>
+            <p>Moi ngay co 1 bai chinh. Cac ngay danh dau (*) co them 1 reel/video ngan. Dieu chinh ngay bat dau theo thoi diem thuc te.</p>
           </div>
-          <div class="phase-grid">
-            <article class="phase-card">
-              <span>Tuần 1</span>
-              <h3>Giai đoạn mở nhận diện</h3>
-              <p>Mục tiêu: làm cho team và khách hàng bắt đầu nhìn thấy dự án một cách rõ ràng, đồng nhất.</p>
+
+          <!-- WEEK 1 -->
+          <div class="week-block">
+            <h3>Tuan 1 — Mo nhan dien</h3>
+            <div class="day-grid">
+              <div class="day-card">
+                <div class="day-label">Ngay 1</div>
+                <div class="day-num">01</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Gioi thieu</span>
+                  <strong>Bai mo man du an</strong>
+                  "Hiep Phuoc Premia — gioi thieu tong quan du an"
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 2</div>
+                <div class="day-num">02</div>
+                <div class="day-content">
+                  <span class="tag tag-visual">Visual</span>
+                  <strong>Carousel anh dep</strong>
+                  4-6 anh du an dep nhat, brand overlay
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 3</div>
+                <div class="day-num">03</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Gioi thieu</span>
+                  <strong>Reel teaser 15-20s *</strong>
+                  Cat tu phim du an, hook manh
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 4</div>
+                <div class="day-num">04</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Thi truong</span>
+                  <strong>"Vi sao nen biet den du an nay?"</strong>
+                  Goc khu vuc, tiem nang
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 5</div>
+                <div class="day-num">05</div>
+                <div class="day-content">
+                  <span class="tag tag-visual">Visual</span>
+                  <strong>Anh chieu toi / dem</strong>
+                  Anh 18, 26, 33, 48
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 6</div>
+                <div class="day-num">06</div>
+                <div class="day-content">
+                  <span class="tag tag-trust">Trust</span>
+                  <strong>Bai phap ly nhe</strong>
+                  "Du an da co giay phep xay dung"
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 7</div>
+                <div class="day-num">07</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Gioi thieu</span>
+                  <strong>"3 dieu can biet" recap</strong>
+                  Tom tat tuan 1
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 2 -->
+          <div class="week-block">
+            <h3>Tuan 2 — Dao sau ly do mua (phan 1)</h3>
+            <div class="day-grid">
+              <div class="day-card">
+                <div class="day-label">Ngay 8</div>
+                <div class="day-num">08</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Thi truong</span>
+                  <strong>Phan tich khu vuc</strong>
+                  Ha tang, ket noi, phat trien
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 9</div>
+                <div class="day-num">09</div>
+                <div class="day-content">
+                  <span class="tag tag-visual">Visual</span>
+                  <strong>Carousel mat bang tong the</strong>
+                  Dung MBTT PNG, overlay chi dan
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 10</div>
+                <div class="day-num">10</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Thi truong</span>
+                  <strong>Video text motion *</strong>
+                  "Khu vuc dang phat trien the nao"
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 11</div>
+                <div class="day-num">11</div>
+                <div class="day-content">
+                  <span class="tag tag-convert">Chinh sach</span>
+                  <strong>Bai chinh sach ban hang</strong>
+                  Tu Ke hoach kinh doanh PDF
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 12</div>
+                <div class="day-num">12</div>
+                <div class="day-content">
+                  <span class="tag tag-visual">Visual</span>
+                  <strong>Anh du an goc rong</strong>
+                  Anh canh quan, tien ich
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 13</div>
+                <div class="day-num">13</div>
+                <div class="day-content">
+                  <span class="tag tag-trust">Trust</span>
+                  <strong>Bai phap ly chi tiet</strong>
+                  GPXD + QD chap thuan dau tu
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 14</div>
+                <div class="day-num">14</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Gioi thieu</span>
+                  <strong>Bai to roi dien giai</strong>
+                  Noi dung tu to roi, branded
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 3 -->
+          <div class="week-block">
+            <h3>Tuan 3 — Dao sau ly do mua (phan 2)</h3>
+            <div class="day-grid">
+              <div class="day-card">
+                <div class="day-label">Ngay 15</div>
+                <div class="day-num">15</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Thi truong</span>
+                  <strong>"Tiem nang dau tu khu vuc"</strong>
+                  Goc nha dau tu
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 16</div>
+                <div class="day-num">16</div>
+                <div class="day-content">
+                  <span class="tag tag-visual">Visual</span>
+                  <strong>Reel voiceover 20-30s *</strong>
+                  Voiceover tren anh du an
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 17</div>
+                <div class="day-num">17</div>
+                <div class="day-content">
+                  <span class="tag tag-convert">CTA</span>
+                  <strong>"Inbox nhan bo tai lieu"</strong>
+                  CTA nhan file tong quan
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 18</div>
+                <div class="day-num">18</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Gioi thieu</span>
+                  <strong>Carousel "5 dieu noi bat"</strong>
+                  5 key selling points
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 19</div>
+                <div class="day-num">19</div>
+                <div class="day-content">
+                  <span class="tag tag-visual">Visual</span>
+                  <strong>Anh dem/toi atmospheric</strong>
+                  Anh 33 toi, 48 dem
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 20</div>
+                <div class="day-num">20</div>
+                <div class="day-content">
+                  <span class="tag tag-trust">Social proof</span>
+                  <strong>Bai su kien/hoat dong</strong>
+                  Anh su kien (neu co)
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 21</div>
+                <div class="day-num">21</div>
+                <div class="day-content">
+                  <span class="tag tag-convert">Chinh sach</span>
+                  <strong>Bai chinh sach uu dai</strong>
+                  Chi lay tu PDF chinh sach
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 4 -->
+          <div class="week-block">
+            <h3>Tuan 4 — Chot chuyen doi</h3>
+            <div class="day-grid">
+              <div class="day-card">
+                <div class="day-label">Ngay 22</div>
+                <div class="day-num">22</div>
+                <div class="day-content">
+                  <span class="tag tag-convert">CTA</span>
+                  <strong>"Nhan full file chinh sach"</strong>
+                  CTA manh, urgency nhe
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 23</div>
+                <div class="day-num">23</div>
+                <div class="day-content">
+                  <span class="tag tag-trust">Trust</span>
+                  <strong>Bai phap ly day du</strong>
+                  GCN quyen su dung dat
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 24</div>
+                <div class="day-num">24</div>
+                <div class="day-content">
+                  <span class="tag tag-visual">Visual</span>
+                  <strong>Reel recap 30s *</strong>
+                  Tong hop highlights 30 ngay
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 25</div>
+                <div class="day-num">25</div>
+                <div class="day-content">
+                  <span class="tag tag-trust">Social proof</span>
+                  <strong>Bai su kien recap</strong>
+                  Hoat dong thuc te, doi ngu
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 26</div>
+                <div class="day-num">26</div>
+                <div class="day-content">
+                  <span class="tag tag-awareness">Thi truong</span>
+                  <strong>"Thoi diem vang de tim hieu"</strong>
+                  Goc thi truong + CTA
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 27</div>
+                <div class="day-num">27</div>
+                <div class="day-content">
+                  <span class="tag tag-visual">Visual</span>
+                  <strong>Carousel "Hinh anh thuc te"</strong>
+                  Best-of anh du an
+                </div>
+              </div>
+              <div class="day-card">
+                <div class="day-label">Ngay 28</div>
+                <div class="day-num">28</div>
+                <div class="day-content">
+                  <span class="tag tag-convert">CTA</span>
+                  <strong>"Can tu van? Inbox ngay"</strong>
+                  CTA truc tiep, final push
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DAYS 29-30 -->
+          <div class="week-block">
+            <h3>Ngay 29-30 — Bonus / lap lai</h3>
+            <div class="card-grid two">
+              <div class="info-card">
+                <div class="day-num" style="font-size:22px">29</div>
+                <span class="tag tag-awareness">Gioi thieu</span>
+                <strong>Bai tong hop "Tat ca ve Hiep Phuoc Premia"</strong>
+                <p>Long-form recap, link den cac bai truoc, CTA cuoi.</p>
+              </div>
+              <div class="info-card">
+                <div class="day-num" style="font-size:22px">30</div>
+                <span class="tag tag-visual">Visual</span>
+                <strong>Video highlight reel 45-60s *</strong>
+                <p>Cat tu phim du an, ghep best-of anh, ket bang CTA.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPTION TEMPLATES -->
+      <section class="section" id="templates">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">5. Mau caption san</span>
+            <h2>8 mau caption dung ngay</h2>
+            <p>Moi mau da co cau truc san, chi can thay thong tin cu the tu source. Dau [...] la cho can dien tu tai lieu.</p>
+          </div>
+
+          <div class="caption-block">
+            <h4>Mau 1 — Bai gioi thieu tong quan du an</h4>
+            <span class="tag tag-awareness">Nhan dien</span>
+            <div class="caption-text">HIEP PHUOC PREMIA — [ten phan khuc, vd: khu do thi / nha pho / can ho]
+
+[1-2 cau tom tat du an tu Tong quan du an PDF]
+
+Vi tri: [vi tri cu the tu tai lieu]
+Quy mo: [quy mo tu tai lieu]
+Chu dau tu: [ten CĐT tu tai lieu]
+
+---
+Inbox de nhan bo tai lieu chi tiet du an.
+#HiepPhuocPremia #DKRA #BatDongSan</div>
+          </div>
+
+          <div class="caption-block">
+            <h4>Mau 2 — Bai phan tich thi truong</h4>
+            <span class="tag tag-awareness">Nhan dien</span>
+            <div class="caption-text">KHU VUC NAY DANG PHAT TRIEN THE NAO?
+
+[2-3 diem noi bat ve thi truong tu Thong tin thi truong PDF]
+
+Hiep Phuoc Premia nam ngay tai [vi tri/khu vuc], noi dang:
+- [diem 1: ha tang, giao thong...]
+- [diem 2: quy hoach, dan cu...]
+- [diem 3: tiem nang tang truong...]
+
+---
+Muon hieu ro hon ve khu vuc? Inbox de nhan bao cao thi truong.
+#HiepPhuocPremia #DauTuBatDongSan</div>
+          </div>
+
+          <div class="caption-block">
+            <h4>Mau 3 — Bai phap ly tao an tam</h4>
+            <span class="tag tag-trust">Niem tin</span>
+            <div class="caption-text">PHAP LY RO RANG — AN TAM TIM HIEU
+
+Hiep Phuoc Premia da co day du ho so phap ly:
+- Giay phep xay dung so [so GPXD tu tai lieu]
+- Quyet dinh chap thuan chu truong dau tu so [so QD tu tai lieu]
+- Giay chung nhan quyen su dung dat
+
+Tat ca giay to deu da duoc cap boi co quan co tham quyen.
+
+---
+Inbox de nhan bo phap ly chi tiet.
+#HiepPhuocPremia #PhapLyRoRang</div>
+          </div>
+
+          <div class="caption-block">
+            <h4>Mau 4 — Bai chinh sach ban hang</h4>
+            <span class="tag tag-convert">Chuyen doi</span>
+            <div class="caption-text">CHINH SACH BAN HANG — DOT [so dot tu tai lieu]
+
+[Tom tat chinh sach tu Ke hoach kinh doanh PDF — chi nhung gi co ghi ro]
+
+Luu y: Thong tin chinh sach co the thay doi theo tung thoi diem.
+Lien he de nhan thong tin cap nhat nhat.
+
+---
+Inbox ngay de nhan file chinh sach day du.
+#HiepPhuocPremia #ChinhSachBanHang</div>
+          </div>
+
+          <div class="caption-block">
+            <h4>Mau 5 — Bai anh dep / carousel</h4>
+            <span class="tag tag-visual">Visual</span>
+            <div class="caption-text">HIEP PHUOC PREMIA — [goc nhin, vd: Buoi chieu tai du an / Goc nhin toan canh]
+
+[1 cau ngan goi cam xuc, vd: "Khong gian song dang mo uoc"]
+
+---
+Vuot sang de xem them hinh anh du an.
+Inbox de nhan bo anh chat luong cao.
+#HiepPhuocPremia #KhongGianSong</div>
+          </div>
+
+          <div class="caption-block">
+            <h4>Mau 6 — Bai CTA nhan file</h4>
+            <span class="tag tag-convert">Chuyen doi</span>
+            <div class="caption-text">BAN MUON TIM HIEU HIEP PHUOC PREMIA?
+
+Inbox ngay de nhan MIEN PHI:
+- Bo tai lieu gioi thieu du an
+- Thong tin thi truong khu vuc
+- Chinh sach ban hang cap nhat
+- Mat bang tong the du an
+
+Chi can comment "TAI LIEU" hoac inbox truc tiep.
+#HiepPhuocPremia #NhanTaiLieu</div>
+          </div>
+
+          <div class="caption-block">
+            <h4>Mau 7 — Bai su kien / social proof</h4>
+            <span class="tag tag-trust">Social proof</span>
+            <div class="caption-text">[TEN SU KIEN, vd: Le gioi thieu du an / Ngay mo ban...]
+
+[Mo ta ngan su kien — chi nhung gi thuc te da xay ra]
+
+Cam on [so luong] khach hang / doi tac da tham du va quan tam den du an.
+
+---
+De khong bo lo thong tin, inbox de duoc cap nhat lien tuc.
+#HiepPhuocPremia #SuKien</div>
+          </div>
+
+          <div class="caption-block">
+            <h4>Mau 8 — Bai "vi sao nen biet den du an nay"</h4>
+            <span class="tag tag-awareness">Nhan dien</span>
+            <div class="caption-text">VI SAO NEN BIET DEN HIEP PHUOC PREMIA?
+
+1. [Ly do 1 — tu tong quan du an]
+2. [Ly do 2 — tu thong tin thi truong]
+3. [Ly do 3 — tu phap ly hoac chinh sach]
+
+Du an nay khong chi la [phan khuc] — ma con la [gia tri cot loi tu source].
+
+---
+Inbox de nhan bo tai lieu va tim hieu them.
+#HiepPhuocPremia #BatDongSan</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHANNELS -->
+      <section class="section alt" id="channels">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">6. Chien luoc kenh</span>
+            <h2>Ma tran noi dung x kenh x muc tieu</h2>
+          </div>
+          <div class="card-grid three">
+            <article class="info-card">
+              <h3>Facebook / Fanpage</h3>
+              <p>Kenh chinh de xay nhan dien va keo inbox.</p>
               <ul>
-                <li>2 bài giới thiệu tổng quan dự án</li>
-                <li>2 bài ảnh dự án đẹp</li>
-                <li>1 reel ngắn từ phim dự án</li>
-                <li>1 bài “vì sao nên biết đến dự án này?”</li>
-                <li>1 bài pháp lý/trust nhẹ</li>
+                <li><strong>Noi dung:</strong> Tat ca 6 tru cot</li>
+                <li><strong>Format:</strong> Carousel, anh don, video</li>
+                <li><strong>Tan suat:</strong> 1-2 bai/ngay</li>
+                <li><strong>CTA:</strong> Inbox nhan file, nhan phap ly, nhan chinh sach</li>
+                <li><strong>Anh goi y:</strong> 1-14.jpg, 18 chieu toi.jpg, mat bang</li>
               </ul>
             </article>
-            <article class="phase-card">
-              <span>Tuần 2–3</span>
-              <h3>Giai đoạn đào sâu lý do mua</h3>
-              <p>Mục tiêu: trả lời câu hỏi của khách, tạo lý do quan tâm, và nâng độ nghiêm túc của lead.</p>
+            <article class="info-card">
+              <h3>Reels / TikTok / Video ngan</h3>
+              <p>Kenh de dung scroll va tao cam xuc nhanh.</p>
               <ul>
-                <li>3 bài phân tích thị trường/khu vực</li>
-                <li>2 bài về mặt bằng/tờ rơi/tài liệu</li>
-                <li>2 bài chính sách bán hàng</li>
-                <li>2 carousel ảnh + thông tin</li>
-                <li>1 video voiceover hoặc text motion</li>
+                <li><strong>Noi dung:</strong> Teaser, highlight, text motion</li>
+                <li><strong>Format:</strong> 9:16, 15-30 giay</li>
+                <li><strong>Tan suat:</strong> 3-4 video/tuan</li>
+                <li><strong>CTA:</strong> Comment/inbox de lay bo tai lieu</li>
+                <li><strong>Source:</strong> Cat tu Film thi truong.mp4</li>
               </ul>
             </article>
-            <article class="phase-card">
-              <span>Tuần 4</span>
-              <h3>Giai đoạn chốt chuyển đổi</h3>
-              <p>Mục tiêu: đẩy khách vào inbox, tư vấn trực tiếp hoặc sales follow-up.</p>
+            <article class="info-card">
+              <h3>Zalo / Sales Enablement</h3>
+              <p>Kenh noi bo hoac nhom sales de thong nhat cach tu van.</p>
               <ul>
-                <li>2 bài CTA nhận full file / chính sách</li>
-                <li>2 bài pháp lý tạo an tâm</li>
-                <li>2 bài sự kiện / social proof</li>
-                <li>1 reel recap</li>
-                <li>1 bài “nếu cần tư vấn thì inbox ngay”</li>
+                <li><strong>Noi dung:</strong> To roi, standee, chinh sach, phap ly</li>
+                <li><strong>Format:</strong> PDF, anh, file doc</li>
+                <li><strong>Muc tieu:</strong> Sales noi cung mot thong diep</li>
+                <li><strong>CTA:</strong> Dung lam file gui khach 1-1</li>
+                <li><strong>Source:</strong> MKT tai lieu & thiet ke</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="lich-tuan">
+      <!-- VISUAL GUIDE -->
+      <section class="section" id="visual-guide">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">7. Tần suất</span>
-            <h2>Lịch nội dung theo tuần đề xuất</h2>
+            <span class="eyebrow">7. Huong dan visual</span>
+            <h2>Chon anh/video nhu the nao</h2>
           </div>
-          <div class="mix-board glass">
-            <div><strong>2 bài/tuần</strong><span>Giới thiệu tổng quan + nhận diện thương hiệu dự án</span></div>
-            <div><strong>2 bài/tuần</strong><span>Thị trường, khu vực, lý do đáng quan tâm</span></div>
-            <div><strong>1 bài/tuần</strong><span>Pháp lý / bài tăng niềm tin</span></div>
-            <div><strong>1 bài/tuần</strong><span>Chính sách / nội dung bán hàng</span></div>
-            <div><strong>2 bài/tuần</strong><span>Ảnh đẹp / carousel / hình ảnh dự án</span></div>
-            <div><strong>1–2 reel/tuần</strong><span>Video ngắn từ phim dự án hoặc ảnh motion</span></div>
-            <div><strong>1 bài/tuần</strong><span>Sự kiện / hoạt động / social proof</span></div>
-            <div><strong>1 bài/tuần</strong><span>CTA trực tiếp kéo inbox / nhận file</span></div>
+          <div class="card-grid two">
+            <article class="info-card">
+              <h3>Anh ban ngay (overview)</h3>
+              <ul>
+                <li>Dung cho: bai gioi thieu, thi truong, carousel</li>
+                <li>Goi y: 1-14.jpg, 23-30.jpg, 34-37.jpg</li>
+                <li>Overlay: logo brand + ten du an</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>Anh chieu toi / dem</h3>
+              <ul>
+                <li>Dung cho: bai visual-only, bai cam xuc, bai lifestyle</li>
+                <li>Goi y: 18 chieu toi.jpg, 26 chieu toi.jpg, 33 toi.jpg, 48_dem.jpg</li>
+                <li>Muc tieu: tao cam giac cao cap, khong gian song</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>Mat bang tong the</h3>
+              <ul>
+                <li>Dung cho: bai giai thich layout, carousel, sales enablement</li>
+                <li>File: HPP_MAT BANG TONG THE.png</li>
+                <li>Overlay: chi dan khu vuc, ghi chu tien ich</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>Phim du an</h3>
+              <ul>
+                <li>File: Hiep Phuoc Premia_Film thi truong.mp4</li>
+                <li>Cach dung: cat thanh 3-5 doan 15-20s, moi doan 1 hook</li>
+                <li>Hook goi y: anh aerial, canh quan, chieu toi, khu vuc</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt" id="mapping">
+      <!-- CHECKLIST -->
+      <section class="section alt" id="checklist">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">8. Mapping nguồn</span>
-            <h2>Mỗi folder nên dùng để làm gì</h2>
+            <span class="eyebrow">8. Checklist</span>
+            <h2>Checklist trien khai tung tuan</h2>
           </div>
-          <div class="source-grid">
-            <article><h3>1. Tổng quan dự án</h3><p>Dùng cho bài giới thiệu dự án, bài hero, bài “3 điều cần biết”.</p></article>
-            <article><h3>2. Thông tin thị trường</h3><p>Dùng cho bài phân tích khu vực, lý do đầu tư, lý do quan tâm.</p></article>
-            <article><h3>3. Kế hoạch truyền thông</h3><p>Dùng để giữ tone chiến dịch đồng nhất nếu folder được cập nhật thêm.</p></article>
-            <article><h3>4. Kế hoạch kinh doanh</h3><p>Dùng cho bài chính sách, CTA bán hàng, ưu đãi nếu có nêu rõ.</p></article>
-            <article><h3>5. MKT tài liệu & thiết kế</h3><p>Dùng cho branding, standee, tờ rơi, MBTT, visual đồng bộ.</p></article>
-            <article><h3>6. Phim dự án</h3><p>Dùng cho reel, teaser, video ngắn, motion content.</p></article>
-            <article><h3>7. Hình ảnh dự án</h3><p>Dùng cho bài ảnh, carousel, visual post hằng ngày.</p></article>
-            <article><h3>8. Hình ảnh sự kiện</h3><p>Dùng cho social proof, bài recap, bài tạo độ nóng thị trường.</p></article>
-            <article><h3>9. Pháp lý dự án</h3><p>Dùng để kiểm tra claim, làm bài tạo niềm tin và trả lời lo lắng.</p></article>
+          <div class="card-grid two">
+            <article class="info-card">
+              <h3>Truoc khi bat dau (1 lan)</h3>
+              <ul class="checklist">
+                <li>Doc ky Tong quan du an PDF — ghi lai 5 key facts</li>
+                <li>Doc Thong tin thi truong PDF — ghi lai 3 goc thi truong</li>
+                <li>Doc Chinh sach ban hang PDF — ghi lai cac diem chinh</li>
+                <li>Kiem tra folder Phap ly — ghi lai so giay phep</li>
+                <li>Tai anh du an — phan loai: ban ngay, chieu toi, dem</li>
+                <li>Tai phim du an — cat thanh 3-5 doan ngan</li>
+                <li>Tai logo/brand guideline — tao template overlay</li>
+                <li>Tao file theo doi: bai da dang, engagement, inbox</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>Moi tuan (lap lai)</h3>
+              <ul class="checklist">
+                <li>Chuan bi 7-10 bai theo lich noi dung</li>
+                <li>Viet caption dung mau — dien thong tin tu source</li>
+                <li>Chon anh/video phu hop voi loai bai</li>
+                <li>Check: khong co claim tu bua (dau tu, gia, uu dai)</li>
+                <li>Check: brand dong bo (logo, mau sac, font)</li>
+                <li>Len lich dang (sang 8-9h hoac toi 7-9h)</li>
+                <li>Theo doi engagement — reply inbox trong 30 phut</li>
+                <li>Ghi nhan so inbox, so nguoi xin file, so lead</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="content-cum-the">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">9. Nội dung cụ thể</span>
-            <h2>10 nhóm nội dung nên làm ngay</h2>
-          </div>
-          <div class="timeline">
-            <div class="timeline-item"><span>01</span><div><h3>Bài mở màn giới thiệu dự án</h3><p>Mục tiêu: cho khách biết dự án tên gì, thuộc phân khúc nào, có gì đáng nhớ.</p></div></div>
-            <div class="timeline-item"><span>02</span><div><h3>Bài “vì sao nên biết đến Hiệp Phước Premia?”</h3><p>Mục tiêu: tạo sự tò mò và nhận diện khác biệt ban đầu.</p></div></div>
-            <div class="timeline-item"><span>03</span><div><h3>Bài phân tích khu vực / thị trường</h3><p>Mục tiêu: tạo lý do quan tâm với nhóm khách thiên về đầu tư hoặc xuống tiền logic.</p></div></div>
-            <div class="timeline-item"><span>04</span><div><h3>Bài visual-only dùng ảnh dự án</h3><p>Mục tiêu: làm đẹp feed, tạo cảm xúc, hỗ trợ ghi nhớ dự án.</p></div></div>
-            <div class="timeline-item"><span>05</span><div><h3>Bài giải thích mặt bằng / MBTT</h3><p>Mục tiêu: giúp khách hình dung dễ hơn về sản phẩm.</p></div></div>
-            <div class="timeline-item"><span>06</span><div><h3>Bài chính sách bán hàng</h3><p>Mục tiêu: hỗ trợ sales và kéo khách nghiêm túc hơn vào inbox.</p></div></div>
-            <div class="timeline-item"><span>07</span><div><h3>Bài pháp lý tạo an tâm</h3><p>Mục tiêu: xử lý nỗi sợ và tăng trust.</p></div></div>
-            <div class="timeline-item"><span>08</span><div><h3>Bài social proof từ hình ảnh sự kiện</h3><p>Mục tiêu: cho thấy dự án đang có hoạt động thực tế, không phải chỉ là bài quảng cáo online.</p></div></div>
-            <div class="timeline-item"><span>09</span><div><h3>Reel teaser 15–30 giây</h3><p>Mục tiêu: tăng reach, kéo người xem sang bài dài hoặc inbox.</p></div></div>
-            <div class="timeline-item"><span>10</span><div><h3>Bài CTA nhận full bộ tài liệu</h3><p>Mục tiêu: biến người xem thành lead, tạo lý do để đội sales follow-up.</p></div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="quy-tac">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">10. Quy tắc</span>
-            <h2>Quy tắc bắt buộc khi triển khai</h2>
-          </div>
-          <div class="rules-grid">
-            <div class="rule">Chỉ dùng nội dung, visual và thông tin từ bộ source chính thức</div>
-            <div class="rule">Không tự thêm claim đầu tư, tăng giá, ưu đãi nếu tài liệu không ghi rõ</div>
-            <div class="rule">Thông tin pháp lý chỉ được phát biểu khi đã đối chiếu folder pháp lý</div>
-            <div class="rule">Thông tin bán hàng chỉ được nói theo tài liệu kế hoạch kinh doanh</div>
-            <div class="rule">Visual phải đồng bộ brand, ưu tiên ảnh dự án và asset chính thức</div>
-            <div class="rule">Bài đăng phải gắn với mục tiêu rõ: nhận diện, tin tưởng, hay chuyển đổi</div>
-          </div>
-        </div>
-      </section>
-
+      <!-- KPI -->
       <section class="section" id="kpi">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">11. KPI</span>
-            <h2>Chỉ số nên theo dõi</h2>
+            <span class="eyebrow">9. KPI</span>
+            <h2>Chi so do luong theo giai doan</h2>
           </div>
           <div class="card-grid three">
-            <article class="info-card compact"><h3>Nhận diện</h3><p>Reach, video views, saves, shares, số người nhớ tên dự án qua tương tác lặp lại.</p></article>
-            <article class="info-card compact"><h3>Niềm tin</h3><p>Số người hỏi pháp lý, hỏi file tổng quan, hỏi thêm thông tin, thời gian giữ chân ở carousel/video.</p></article>
-            <article class="info-card compact"><h3>Chuyển đổi</h3><p>Số inbox, số người xin file, số khách hỏi chính sách, số lead bàn giao cho sales.</p></article>
+            <article class="info-card">
+              <span class="tag tag-awareness">Tuan 1</span>
+              <h3>Nhan dien</h3>
+              <ul>
+                <li>Reach tong: target 5,000+</li>
+                <li>Video views: target 1,000+</li>
+                <li>Profile visits: tang 30%</li>
+                <li>Saves/shares: 50+</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-trust">Tuan 2-3</span>
+              <h3>Niem tin & quan tam</h3>
+              <ul>
+                <li>Carousel completion rate: 60%+</li>
+                <li>Avg time on post: tang 20%</li>
+                <li>So nguoi hoi phap ly: 10+</li>
+                <li>So nguoi xin file tong quan: 20+</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-convert">Tuan 4</span>
+              <h3>Chuyen doi</h3>
+              <ul>
+                <li>So inbox: target 30+</li>
+                <li>So nguoi xin file chinh sach: 15+</li>
+                <li>So lead ban giao cho sales: 10+</li>
+                <li>So hen tu van: 5+</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- RULES -->
+      <section class="section alt" id="rules">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">10. Quy tac</span>
+            <h2>Quy tac bat buoc khi trien khai</h2>
+          </div>
+          <div class="card-grid three">
+            <article class="info-card" style="border-left: 3px solid var(--red)">
+              <h3>KHONG duoc lam</h3>
+              <ul>
+                <li>Tu bua claim dau tu, tang gia, loi nhuan</li>
+                <li>Tu them uu dai, chiet khau, ho tro ngoai tai lieu</li>
+                <li>Dung hinh anh khong chinh thuc khi da co anh official</li>
+                <li>Phat bieu phap ly khi chua doi chieu folder phap ly</li>
+                <li>Phong dai quy mo, tien ich, hoac tien do</li>
+              </ul>
+            </article>
+            <article class="info-card" style="border-left: 3px solid var(--green)">
+              <h3>PHAI lam</h3>
+              <ul>
+                <li>Lay thong tin tu bo source chinh thuc</li>
+                <li>Dong bo brand (logo, mau sac, font)</li>
+                <li>Moi bai phai gan voi 1 muc tieu: nhan dien, tin tuong, hoac chuyen doi</li>
+                <li>Uu tien tu ngu chinh thuc tu tai lieu</li>
+                <li>Reply inbox trong 30 phut</li>
+              </ul>
+            </article>
+            <article class="info-card" style="border-left: 3px solid var(--blue)">
+              <h3>Thu tu uu tien source</h3>
+              <ul>
+                <li>1. Phap ly du an — cho moi claim phap ly</li>
+                <li>2. Tong quan du an — cho thong tin co ban</li>
+                <li>3. Thong tin thi truong — cho goc thi truong</li>
+                <li>4. Ke hoach kinh doanh — cho chinh sach</li>
+                <li>5. MKT tai lieu — cho brand/visual</li>
+                <li>6. Phim du an — cho video content</li>
+                <li>7. Hinh anh du an — cho visual hang ngay</li>
+                <li>8. Hinh anh su kien — cho social proof</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOURCE REFERENCE -->
+      <section class="section" id="source">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Tham chieu</span>
+            <h2>Bo source chinh thuc</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item"><span>01</span><div><h3>Tong quan du an</h3><p>Hiep Phuoc Premia_Gioi thieu Thong tin du an.pdf</p></div></div>
+            <div class="timeline-item"><span>02</span><div><h3>Thong tin thi truong</h3><p>Hiep Phuoc Premia_Thong tin thi truong_25.3.2026.pdf</p></div></div>
+            <div class="timeline-item"><span>03</span><div><h3>Chinh sach ban hang</h3><p>Hiep Phuoc Premia_Chinh Sach Ban Hang_D1 25.3.2026.pdf</p></div></div>
+            <div class="timeline-item"><span>04</span><div><h3>Logo & Brand Guidelines</h3><p>Hiep Phuoc PREMIA - Logo Guidelines preview.pdf</p></div></div>
+            <div class="timeline-item"><span>05</span><div><h3>Mat bang tong the</h3><p>HPP_MAT BANG TONG THE.png</p></div></div>
+            <div class="timeline-item"><span>06</span><div><h3>Phim du an</h3><p>Hiep Phuoc Premia_Film thi truong.mp4</p></div></div>
+            <div class="timeline-item"><span>07</span><div><h3>Hinh anh du an</h3><p>44 hinh anh chinh thuc (1.jpg - 53.jpg)</p></div></div>
+            <div class="timeline-item"><span>08</span><div><h3>Phap ly du an</h3><p>GPXD, QD chap thuan, GCN quyen su dung dat, QD phe duyet do an</p></div></div>
           </div>
         </div>
       </section>
@@ -340,10 +1068,10 @@
     <footer class="footer">
       <div class="container footer-wrap">
         <div>
-          <strong>Kế hoạch Marketing DKRA Hiệp Phước Premia</strong>
-          <p>Bản tiếng Việt chi tiết để team dùng làm chuẩn triển khai nội dung.</p>
+          <strong>Marketing Plan V2 — DKRA Hiep Phuoc Premia</strong>
+          <p>Ban chi tiet voi lich 30 ngay, mau caption, va checklist trien khai.</p>
         </div>
-        <div class="footer-note">Cập nhật từ bộ source content chính thức của dự án.</div>
+        <div class="footer-note">Xay dung tu bo source content chinh thuc — Cap nhat 2026-03-31</div>
       </div>
     </footer>
   </div>
