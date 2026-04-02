@@ -1,0 +1,1104 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Marketing Plan V3 — DKRA Hiệp Phước Premia</title>
+  <meta name="description" content="Kế hoạch AI Automation Marketing V3 cho DKRA Hiệp Phước Premia — pipeline tự động, model routing, creative testing, paid amplification." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #0d1117;
+  --panel: rgba(255,255,255,0.06);
+  --panel-strong: rgba(255,255,255,0.1);
+  --text: #eff4fb;
+  --muted: #b2bfd1;
+  --line: rgba(255,255,255,0.12);
+  --gold: #f3c56b;
+  --blue: #79b8ff;
+  --green: #7ee787;
+  --red: #f97583;
+  --purple: #d2a8ff;
+  --cyan: #56d4dd;
+  --accent: linear-gradient(135deg, #6ea8fe 0%, #d2a8ff 50%, #f3c56b 100%);
+  --radius: 24px;
+  --shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(210,168,255,0.18), transparent 40%),
+    radial-gradient(ellipse at 80% 0%, rgba(243,197,107,0.14), transparent 35%),
+    radial-gradient(ellipse at 50% 100%, rgba(121,184,255,0.10), transparent 40%),
+    #08111f;
+  color: var(--text);
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1200px, calc(100% - 32px)); margin: 0 auto; }
+.section { padding: 80px 0; }
+.section.alt { background: rgba(255,255,255,0.02); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-head { max-width: 800px; margin-bottom: 40px; }
+.section-head h2 { margin: 10px 0 14px; font-size: clamp(28px, 4vw, 48px); line-height: 1.05; letter-spacing: -0.03em; }
+.section-head p { color: var(--muted); font-size: 17px; line-height: 1.75; }
+.eyebrow {
+  display: inline-block; padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,0.14); border-radius: 999px;
+  color: var(--purple); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600;
+}
+
+/* Hero */
+.hero { padding: 72px 0 48px; }
+.hero h1 { font-size: clamp(36px, 5.5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; margin: 16px 0; }
+.hero h1 .gradient-text {
+  background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.lede { color: var(--muted); font-size: 17px; line-height: 1.8; max-width: 760px; }
+.hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 28px; align-items: stretch; }
+.hero-actions { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 50px; padding: 0 22px; border-radius: 999px; font-weight: 700; font-size: 15px;
+  border: 1px solid transparent; transition: .2s ease; cursor: pointer;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: #08111f; }
+.btn-secondary { border-color: var(--line); background: rgba(255,255,255,0.05); }
+.toc { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.toc a {
+  padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px;
+  font-size: 13px; font-weight: 600; transition: .2s;
+}
+.toc a:hover { background: rgba(255,255,255,0.08); }
+
+/* Glass card */
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  border: 1px solid var(--line); backdrop-filter: blur(16px);
+  border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px;
+}
+.glass h3 { margin-bottom: 14px; font-size: 20px; }
+.glass ul { padding-left: 18px; color: var(--muted); line-height: 1.9; }
+
+/* Cards */
+.card-grid { display: grid; gap: 18px; }
+.card-grid.two { grid-template-columns: repeat(2, 1fr); }
+.card-grid.three { grid-template-columns: repeat(3, 1fr); }
+.card-grid.four { grid-template-columns: repeat(4, 1fr); }
+.info-card {
+  background: rgba(255,255,255,0.04); border: 1px solid var(--line);
+  border-radius: 22px; box-shadow: var(--shadow); padding: 26px;
+}
+.info-card h3 { margin: 0 0 10px; font-size: 20px; }
+.info-card h4 { margin: 16px 0 8px; font-size: 16px; color: var(--gold); }
+.info-card p { color: var(--muted); line-height: 1.75; margin: 0 0 12px; }
+.info-card ul { padding-left: 18px; color: var(--muted); line-height: 1.8; }
+.info-card li { margin-bottom: 4px; }
+.info-card li strong { color: var(--text); }
+
+/* Tags */
+.tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 999px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
+.tag-ai { background: rgba(210,168,255,0.18); color: var(--purple); }
+.tag-pipeline { background: rgba(121,184,255,0.15); color: var(--blue); }
+.tag-test { background: rgba(243,197,107,0.15); color: var(--gold); }
+.tag-paid { background: rgba(249,117,131,0.15); color: var(--red); }
+.tag-broker { background: rgba(126,231,135,0.15); color: var(--green); }
+.tag-ops { background: rgba(86,212,221,0.15); color: var(--cyan); }
+.tag-lead { background: rgba(243,197,107,0.15); color: var(--gold); }
+.tag-kpi { background: rgba(210,168,255,0.15); color: var(--purple); }
+
+/* Pill row */
+.pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.pill-row span {
+  border: 1px solid var(--line); padding: 10px 14px; border-radius: 999px;
+  font-size: 14px; font-weight: 600;
+}
+.pill-row .pill-purple { color: var(--purple); background: rgba(210,168,255,0.08); }
+.pill-row .pill-blue { color: var(--blue); background: rgba(121,184,255,0.08); }
+.pill-row .pill-gold { color: var(--gold); background: rgba(243,197,107,0.08); }
+.pill-row .pill-green { color: var(--green); background: rgba(126,231,135,0.08); }
+
+/* Pipeline diagram */
+.pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 28px 0; }
+.pipe-step {
+  padding: 24px 18px; text-align: center; border-radius: 16px;
+  font-weight: 700; font-size: 14px; line-height: 1.5;
+}
+.pipe-step .pipe-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+.pipe-step .pipe-label { display: block; font-size: 12px; color: var(--muted); font-weight: 500; margin-top: 6px; }
+.pipe-a { background: rgba(121,184,255,0.12); color: var(--blue); }
+.pipe-b { background: rgba(210,168,255,0.12); color: var(--purple); }
+.pipe-c { background: rgba(243,197,107,0.12); color: var(--gold); }
+.pipe-d { background: rgba(126,231,135,0.12); color: var(--green); }
+
+/* Flow arrows */
+.flow-row { display: flex; align-items: center; gap: 0; margin: 28px 0; flex-wrap: wrap; }
+.flow-step {
+  flex: 1; min-width: 180px; padding: 18px; border-radius: 16px;
+  font-size: 14px; font-weight: 600; text-align: center;
+  position: relative;
+}
+.flow-arrow {
+  width: 32px; text-align: center; color: var(--muted); font-size: 20px; flex-shrink: 0;
+}
+
+/* Model tier table */
+.model-table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+.model-table th, .model-table td {
+  padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line);
+}
+.model-table th { color: var(--gold); font-size: 13px; text-transform: uppercase; letter-spacing: .1em; }
+.model-table td { color: var(--muted); font-size: 15px; }
+.model-table tr:hover td { color: var(--text); }
+.model-table .tier-badge {
+  display: inline-block; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;
+}
+.tier-fast { background: rgba(126,231,135,0.15); color: var(--green); }
+.tier-quality { background: rgba(210,168,255,0.15); color: var(--purple); }
+.tier-check { background: rgba(249,117,131,0.15); color: var(--red); }
+
+/* Comparison */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+.compare-card { padding: 24px; border-radius: 20px; }
+.compare-old { background: rgba(249,117,131,0.08); border: 1px solid rgba(249,117,131,0.2); }
+.compare-new { background: rgba(126,231,135,0.08); border: 1px solid rgba(126,231,135,0.2); }
+.compare-card h4 { font-size: 16px; margin-bottom: 12px; }
+.compare-card ul { padding-left: 18px; color: var(--muted); line-height: 1.8; }
+
+/* Week rhythm */
+.rhythm-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-top: 20px; }
+.rhythm-day {
+  padding: 16px 10px; border-radius: 16px; text-align: center;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--line);
+  font-size: 13px; line-height: 1.5;
+}
+.rhythm-day .day-name { font-weight: 800; font-size: 15px; margin-bottom: 8px; display: block; }
+.rhythm-day.highlight { border-color: var(--gold); background: rgba(243,197,107,0.06); }
+
+/* Code block */
+.code-block {
+  background: rgba(0,0,0,0.4); border: 1px solid var(--line); border-radius: 14px;
+  padding: 20px; margin: 16px 0; font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 13px; line-height: 1.7; color: var(--muted); overflow-x: auto;
+  white-space: pre-wrap;
+}
+.code-block .comment { color: #6a737d; }
+.code-block .key { color: var(--blue); }
+.code-block .val { color: var(--green); }
+.code-block .fn { color: var(--purple); }
+
+/* Timeline */
+.timeline { display: grid; gap: 14px; }
+.timeline-item {
+  display: grid; grid-template-columns: 60px 1fr; gap: 18px; align-items: start;
+  padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,0.04);
+}
+.timeline-item .t-num {
+  width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%;
+  background: rgba(210,168,255,0.12); color: var(--purple); font-weight: 800; font-size: 18px;
+}
+.timeline-item h3 { margin: 2px 0 8px; font-size: 20px; }
+.timeline-item p { color: var(--muted); line-height: 1.7; }
+
+/* Metrics */
+.metric-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 20px; }
+.metric-card {
+  padding: 20px; border-radius: 18px; text-align: center;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--line);
+}
+.metric-card .metric-num { font-size: 28px; font-weight: 800; }
+.metric-card .metric-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: .08em; }
+
+/* Footer */
+.footer { border-top: 1px solid var(--line); padding: 28px 0 48px; }
+.footer-wrap { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); }
+.footer strong { display: block; color: var(--text); margin-bottom: 8px; }
+
+/* Badge */
+.version-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(210,168,255,0.12); border: 1px solid rgba(210,168,255,0.25);
+  padding: 6px 16px; border-radius: 999px; font-size: 13px; font-weight: 700; color: var(--purple);
+}
+
+@media (max-width: 980px) {
+  .hero-grid, .card-grid.two, .card-grid.three, .card-grid.four, .pipeline, .compare-grid, .rhythm-grid, .metric-row {
+    grid-template-columns: 1fr;
+  }
+  .flow-row { flex-direction: column; }
+  .flow-arrow { transform: rotate(90deg); }
+  .hero { padding-top: 48px; }
+  .footer-wrap { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .section { padding: 48px 0; }
+}
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="version-badge">⚡ V3 — AI Automation</div>
+          <h1><span class="gradient-text">AI Marketing<br/>Automation</span><br/>Hiệp Phước Premia</h1>
+          <p class="lede">
+            Nâng cấp từ "kế hoạch nội dung" thành <strong>hệ thống marketing tự vận hành</strong>.
+            AI sinh nội dung, phân phối đa kênh, test tự động, thu lead, và tối ưu liên tục — 
+            con người chỉ duyệt và chốt khách.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pipeline">4-Layer Pipeline</a>
+            <a class="btn btn-secondary" href="#models">Model Routing</a>
+            <a class="btn btn-secondary" href="#testing">Creative Testing</a>
+          </div>
+          <div class="toc">
+            <a href="#upgrade">V2 → V3</a>
+            <a href="#pipeline">Pipeline</a>
+            <a href="#models">Models</a>
+            <a href="#content-factory">Content Factory</a>
+            <a href="#testing">Testing</a>
+            <a href="#paid">Paid Ads</a>
+            <a href="#leads">Lead System</a>
+            <a href="#broker">Broker Copilot</a>
+            <a href="#rhythm">Vận hành</a>
+            <a href="#kpi">KPI</a>
+            <a href="#sop">SOP 30 ngày</a>
+          </div>
+        </div>
+        <div class="glass">
+          <h3>V3 khác V2 như thế nào?</h3>
+          <ul>
+            <li><strong>V2:</strong> Lịch nội dung + caption mẫu (con người làm tất cả)</li>
+            <li><strong>V3:</strong> AI pipeline sinh nội dung, test, tối ưu tự động</li>
+            <li>Thêm: Paid amplification loop</li>
+            <li>Thêm: Lead capture & classification</li>
+            <li>Thêm: Broker Copilot (nhân bản phân phối)</li>
+            <li>Thêm: Creative testing engine (A/B tự động)</li>
+            <li>Thêm: Model routing (giảm 70% chi phí AI)</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill-purple">4 layers</span>
+            <span class="pill-blue">3 model tiers</span>
+            <span class="pill-gold">5 core KPIs</span>
+            <span class="pill-green">30-day SOP</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- V2 → V3 UPGRADE -->
+      <section class="section" id="upgrade">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Tổng quan</span>
+            <h2>Từ Content Calendar → AI Growth System</h2>
+            <p>V2 cho bạn câu trả lời "đăng gì". V3 cho bạn cả hệ thống vận hành — từ sinh nội dung đến thu lead, tối ưu, và scale.</p>
+          </div>
+          <div class="compare-grid">
+            <div class="compare-card compare-old">
+              <h4 style="color: var(--red);">❌ V2 — Content Calendar</h4>
+              <ul>
+                <li>30 bài đăng viết tay, mỗi bài mất 30-60 phút</li>
+                <li>1 format / 1 kênh (chủ yếu Facebook)</li>
+                <li>Không có paid ads → reach 2-5% organic</li>
+                <li>Lead vào inbox → mất theo DM</li>
+                <li>Không biết content nào hiệu quả</li>
+                <li>Broker tự soạn = sai thông tin</li>
+                <li>Không có feedback loop</li>
+              </ul>
+            </div>
+            <div class="compare-card compare-new">
+              <h4 style="color: var(--green);">✅ V3 — AI Growth System</h4>
+              <ul>
+                <li>AI sinh 30 bài trong 30 phút, con người duyệt 1 lần</li>
+                <li>1 ý tưởng → 8 outputs (FB, TikTok, Zalo, Reel, ad copy...)</li>
+                <li>Always-on paid loop → boost winners tự động</li>
+                <li>Lead capture → phân loại → CRM → sales handoff</li>
+                <li>A/B test tự động: 5 hooks × 3 CTAs → keep winner</li>
+                <li>Broker Copilot: bộ tài liệu chuẩn mỗi ngày</li>
+                <li>Weekly optimization: winner playbook tự cập nhật</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4-LAYER PIPELINE -->
+      <section class="section alt" id="pipeline">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">1. Kiến trúc hệ thống</span>
+            <h2>4-Layer AI Pipeline</h2>
+            <p>Không chỉ là "dùng AI viết bài". Đây là pipeline 4 tầng — mỗi tầng có input, output, và trigger rõ ràng.</p>
+          </div>
+
+          <div class="pipeline">
+            <div class="pipe-step pipe-a">
+              <span class="pipe-icon">📥</span>
+              Layer A<br/>Ingestion
+              <span class="pipe-label">Source → Structured Data</span>
+            </div>
+            <div class="pipe-step pipe-b">
+              <span class="pipe-icon">🏭</span>
+              Layer B<br/>Content Factory
+              <span class="pipe-label">1 Idea → 8 Outputs</span>
+            </div>
+            <div class="pipe-step pipe-c">
+              <span class="pipe-icon">📡</span>
+              Layer C<br/>Distribution
+              <span class="pipe-label">Multi-channel Auto-post</span>
+            </div>
+            <div class="pipe-step pipe-d">
+              <span class="pipe-icon">🎯</span>
+              Layer D<br/>Lead Engine
+              <span class="pipe-label">Classify → Route → Close</span>
+            </div>
+          </div>
+
+          <div class="card-grid two">
+            <article class="info-card">
+              <span class="tag tag-pipeline">Layer A</span>
+              <h3>📥 Source Ingestion</h3>
+              <p>Tự động hút và cấu trúc hóa toàn bộ tài liệu dự án.</p>
+              <h4>Input</h4>
+              <ul>
+                <li>9 folder Drive gốc (PDF, ảnh, video, pháp lý)</li>
+                <li>Tài liệu mới khi CĐT cập nhật</li>
+              </ul>
+              <h4>Process</h4>
+              <ul>
+                <li>OCR + parse PDF → extract facts, claims, numbers</li>
+                <li>Phân loại ảnh: ban ngày / chiều tối / đêm / sự kiện</li>
+                <li>Tag pháp lý: claim nào được phép dùng</li>
+              </ul>
+              <h4>Output</h4>
+              <div class="code-block"><span class="comment">// Structured knowledge base</span>
+{
+  <span class="key">"facts"</span>: [<span class="val">"Quy mô 5.2ha"</span>, <span class="val">"770 căn"</span>, ...],
+  <span class="key">"claims"</span>: [<span class="val">"GPXD số 4708"</span>, ...],
+  <span class="key">"hooks"</span>: [<span class="val">"Khu vực đang phát triển"</span>, ...],
+  <span class="key">"legal_safe"</span>: [<span class="val">"Đã có GCN quyền sử dụng đất"</span>, ...],
+  <span class="key">"ctas"</span>: [<span class="val">"Inbox nhận file"</span>, <span class="val">"Comment TÀI LIỆU"</span>, ...]
+}</div>
+            </article>
+
+            <article class="info-card">
+              <span class="tag tag-pipeline">Layer B</span>
+              <h3>🏭 Content Factory</h3>
+              <p>1 ý tưởng nội dung → tự động sinh 8 phiên bản cho các kênh khác nhau.</p>
+              <h4>Input</h4>
+              <ul>
+                <li>Content brief: pillar + angle + audience</li>
+                <li>Knowledge base từ Layer A</li>
+              </ul>
+              <h4>Auto-generate</h4>
+              <ul>
+                <li><strong>FB Long post</strong> — bài dài, storytelling</li>
+                <li><strong>FB Short post</strong> — hook + CTA ngắn</li>
+                <li><strong>Reel script</strong> — 15-30s, voiceover text</li>
+                <li><strong>TikTok script</strong> — hook khác, trend format</li>
+                <li><strong>Carousel copy</strong> — 5-8 slides text</li>
+                <li><strong>Zalo version</strong> — tone tư vấn, ít emoji</li>
+                <li><strong>Broker script</strong> — sales-ready, objection handling</li>
+                <li><strong>Ad copy</strong> — 3 variants cho paid</li>
+              </ul>
+            </article>
+
+            <article class="info-card">
+              <span class="tag tag-pipeline">Layer C</span>
+              <h3>📡 Smart Distribution</h3>
+              <p>Không post 1 bài cho tất cả. Mỗi kênh có format, timing, và CTA riêng.</p>
+              <h4>Channel Logic</h4>
+              <ul>
+                <li><strong>Facebook:</strong> 8-9h sáng hoặc 7-9h tối, carousel + video ưu tiên</li>
+                <li><strong>TikTok:</strong> 11-13h và 19-21h, hook 3 giây đầu quyết định</li>
+                <li><strong>Reels:</strong> Repurpose TikTok + hashtag khác</li>
+                <li><strong>Zalo OA:</strong> Broadcast 1 lần/tuần, dẫn về inbox</li>
+                <li><strong>Broker Zalo:</strong> Daily kit push lúc 7h sáng</li>
+              </ul>
+              <h4>Auto-repurpose Rule</h4>
+              <p>Cùng góc nhìn → khác hook theo kênh. Ví dụ:</p>
+              <ul>
+                <li>FB: "Hiệp Phước Premia có gì đặc biệt?"</li>
+                <li>TikTok: "Dự án này mà tôi KHÔNG review là thiếu sót"</li>
+                <li>Zalo: "Anh/chị tham khảo thông tin dự án Hiệp Phước Premia"</li>
+              </ul>
+            </article>
+
+            <article class="info-card">
+              <span class="tag tag-pipeline">Layer D</span>
+              <h3>🎯 Lead Engine</h3>
+              <p>Thu — phân loại — nuôi — chuyển sales. Không để lead chết trong inbox.</p>
+              <h4>Capture Points</h4>
+              <ul>
+                <li>Comment trigger: "TÀI LIỆU", "GIÁ", "PHÁP LÝ"</li>
+                <li>Inbox auto-detect: ý định hỏi giá, vị trí, pháp lý</li>
+                <li>Landing page form (nếu có)</li>
+                <li>Zalo OA message</li>
+              </ul>
+              <h4>Classification</h4>
+              <ul>
+                <li><strong>🏠 Buyer:</strong> hỏi về ở, tiện ích, trường học → gửi tổng quan + ảnh</li>
+                <li><strong>💰 Investor:</strong> hỏi giá, ROI, khu vực → gửi thị trường + chính sách</li>
+                <li><strong>🤝 Broker:</strong> hỏi hoa hồng, hợp tác → gửi broker kit</li>
+              </ul>
+              <h4>Handoff</h4>
+              <ul>
+                <li>Auto-reply nội dung phù hợp trong 5 phút</li>
+                <li>Gắn tag + score vào Google Sheet / CRM</li>
+                <li>Notify sales team khi lead nóng (hỏi giá + pháp lý)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODEL ROUTING -->
+      <section class="section" id="models">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">2. Model Routing</span>
+            <h2>3 tầng AI — Tối ưu chi phí 70%</h2>
+            <p>Không phải task nào cũng cần model đắt tiền. Phân tầng đúng = giảm chi phí mà không giảm chất lượng.</p>
+          </div>
+
+          <table class="model-table">
+            <thead>
+              <tr>
+                <th>Tier</th>
+                <th>Dùng cho</th>
+                <th>Ví dụ tasks</th>
+                <th>% Workload</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tier-badge tier-fast">⚡ Fast / Cheap</span></td>
+                <td>Drafts, biến thể, rewrites</td>
+                <td>20 hook variants, hashtag ideas, repurpose text, dịch Zalo tone</td>
+                <td style="color: var(--green); font-weight: 700;">80%</td>
+              </tr>
+              <tr>
+                <td><span class="tier-badge tier-quality">✨ Quality</span></td>
+                <td>Final copy, thuyết phục</td>
+                <td>Hero captions, conversion CTA, carousel storytelling, ad copy</td>
+                <td style="color: var(--purple); font-weight: 700;">15%</td>
+              </tr>
+              <tr>
+                <td><span class="tier-badge tier-check">🛡️ Checker</span></td>
+                <td>Kiểm tra claim, pháp lý</td>
+                <td>Verify facts vs source, check legal claims, flag made-up numbers</td>
+                <td style="color: var(--red); font-weight: 700;">5%</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="card-grid three" style="margin-top: 28px;">
+            <article class="info-card">
+              <span class="tag tag-ai">Quy tắc 80/15/5</span>
+              <h3>Cost Optimization</h3>
+              <ul>
+                <li>80% tasks dùng model rẻ nhất</li>
+                <li>15% dùng model chất lượng cao</li>
+                <li>5% dùng checker để verify</li>
+                <li><strong>Kết quả:</strong> Giảm ~70% chi phí AI so với dùng premium cho tất cả</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-ai">Workflow</span>
+              <h3>Cách chạy</h3>
+              <ul>
+                <li><strong>Bước 1:</strong> Fast model sinh 20 drafts</li>
+                <li><strong>Bước 2:</strong> Quality model chọn + polish top 5</li>
+                <li><strong>Bước 3:</strong> Checker verify facts trước publish</li>
+                <li><strong>Bước 4:</strong> Human approve (1 click)</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-ai">Safety Net</span>
+              <h3>Bất động sản = rủi ro cao</h3>
+              <ul>
+                <li>Checker bắt buộc cho mọi claim về giá, pháp lý, ROI</li>
+                <li>Cross-reference với knowledge base</li>
+                <li>Flag + block nếu claim không có trong source</li>
+                <li>Giữ log audit trail cho mỗi bài</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT FACTORY DETAIL -->
+      <section class="section alt" id="content-factory">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">3. Content Factory</span>
+            <h2>1 Idea → 8 Outputs (tự động)</h2>
+            <p>Template system + variable injection. Không viết lại từ đầu cho mỗi kênh.</p>
+          </div>
+
+          <div class="flow-row">
+            <div class="flow-step pipe-a" style="border-radius:16px;padding:16px;">
+              <strong>Content Brief</strong><br/>
+              <span style="font-size:12px;color:var(--muted);">Pillar + Angle + Audience</span>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step pipe-b" style="border-radius:16px;padding:16px;">
+              <strong>AI Content Factory</strong><br/>
+              <span style="font-size:12px;color:var(--muted);">Template × Knowledge Base</span>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step pipe-c" style="border-radius:16px;padding:16px;">
+              <strong>8 Channel Outputs</strong><br/>
+              <span style="font-size:12px;color:var(--muted);">FB, TikTok, Reel, Zalo, Ad...</span>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step pipe-d" style="border-radius:16px;padding:16px;">
+              <strong>Human Review</strong><br/>
+              <span style="font-size:12px;color:var(--muted);">Approve / Edit / Reject</span>
+            </div>
+          </div>
+
+          <div class="info-card" style="margin-top:20px;">
+            <h3>Ví dụ: Pillar "Giới thiệu dự án" + Angle "Tổng quan" + Audience "Buyer"</h3>
+            <div class="code-block"><span class="comment">// AI tự sinh 8 outputs từ 1 brief:</span>
+
+<span class="fn">1. FB Long:</span>  <span class="val">"HIỆP PHƯỚC PREMIA — Không gian sống mới tại Nhà Bè..."</span> (300 từ)
+<span class="fn">2. FB Short:</span> <span class="val">"5.2ha — 770 căn — Pháp lý hoàn chỉnh. Inbox ngay 👇"</span> (50 từ)
+<span class="fn">3. Reel:</span>     <span class="val">"[Hook] Dự án 770 căn mà ít người biết... [Body] ..."</span> (script 20s)
+<span class="fn">4. TikTok:</span>   <span class="val">"[POV] Bạn đang tìm nhà ở thật, không phải đầu cơ..."</span> (script 15s)
+<span class="fn">5. Carousel:</span> <span class="val">[Slide 1: Hook] [Slide 2: Vị trí] [Slide 3: Quy mô]...</span> (6 slides)
+<span class="fn">6. Zalo:</span>     <span class="val">"Anh/chị xem qua thông tin dự án Hiệp Phước Premia..."</span> (formal)
+<span class="fn">7. Broker:</span>   <span class="val">"Key points: 5.2ha, GPXD 4708, GCN đất. Objection: ..."</span>
+<span class="fn">8. Ad Copy:</span>  <span class="val">[Variant A: Pain] [Variant B: Gain] [Variant C: Fear]</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CREATIVE TESTING -->
+      <section class="section" id="testing">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">4. Creative Testing Engine</span>
+            <h2>A/B Test tự động — giữ winner, loại loser</h2>
+            <p>V2 đăng tuyến tính, không biết cái nào hiệu quả. V3 test mọi thứ và chỉ scale cái thắng.</p>
+          </div>
+
+          <div class="card-grid two">
+            <article class="info-card">
+              <span class="tag tag-test">Testing Matrix</span>
+              <h3>Mỗi content pillar, auto-generate:</h3>
+              <ul>
+                <li><strong>5 hooks khác nhau</strong> (emotional, logical, fear, curiosity, social proof)</li>
+                <li><strong>3 CTAs</strong> (soft: "tìm hiểu thêm", medium: "inbox nhận file", hard: "đặt lịch ngay")</li>
+                <li><strong>2 formats</strong> (text+image vs video)</li>
+                <li>= <strong>30 combinations</strong> per pillar</li>
+              </ul>
+              <h4>Process</h4>
+              <ul>
+                <li>Post top 3-5 variants organic (staggered 2h)</li>
+                <li>Sau 24h: đo hook rate, save rate, inbox rate</li>
+                <li>Winner → boost với paid budget</li>
+                <li>Loser → archive, learn pattern</li>
+              </ul>
+            </article>
+
+            <article class="info-card">
+              <span class="tag tag-test">5 Core Metrics</span>
+              <h3>Chỉ track 5 con số quan trọng</h3>
+              <div class="metric-row" style="grid-template-columns: 1fr;">
+                <div>
+                  <ul>
+                    <li><strong style="color:var(--blue);">1. Hook Rate</strong> — 3s view / impression. Content có dừng scroll không?</li>
+                    <li><strong style="color:var(--green);">2. Save/Share Rate</strong> — Người ta thấy đáng lưu / chia sẻ không?</li>
+                    <li><strong style="color:var(--gold);">3. DM Rate</strong> — Bao nhiêu % vào inbox sau khi xem?</li>
+                    <li><strong style="color:var(--purple);">4. Qualified Lead Rate</strong> — Trong inbox, bao nhiêu % là lead thật?</li>
+                    <li><strong style="color:var(--red);">5. Cost per Qualified Lead</strong> — Nếu có paid, mỗi lead thật giá bao nhiêu?</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAID AMPLIFICATION -->
+      <section class="section alt" id="paid">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">5. Paid Amplification</span>
+            <h2>Boost Winners — Không đốt tiền cho losers</h2>
+            <p>Organic reach trên Facebook = 2-5%. Paid ads không phải "thêm", mà là <strong>bắt buộc</strong> nếu muốn kết quả.</p>
+          </div>
+
+          <div class="card-grid three">
+            <article class="info-card">
+              <span class="tag tag-paid">Always-on Budget</span>
+              <h3>Chiến lược ngân sách</h3>
+              <ul>
+                <li><strong>Budget đề xuất:</strong> 5-10 triệu/tuần</li>
+                <li><strong>Rule:</strong> Chỉ boost bài đã chứng minh organic tốt</li>
+                <li><strong>Tiêu chí boost:</strong> Save rate > 3% hoặc DM > 5</li>
+                <li><strong>Kill rule:</strong> CPM > 80k → stop ngay</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-paid">Retargeting</span>
+              <h3>3 tầng retarget</h3>
+              <ul>
+                <li><strong>Tầng 1:</strong> Video viewers (xem >50%) → bài thị trường/pháp lý</li>
+                <li><strong>Tầng 2:</strong> Engagers (like, comment, save) → bài CTA</li>
+                <li><strong>Tầng 3:</strong> DM openers (đã inbox) → reminder + chính sách mới</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-paid">Lookalike</span>
+              <h3>Mở rộng tự động</h3>
+              <ul>
+                <li>Mỗi tuần: tạo lookalike từ DM openers</li>
+                <li>Lookalike 1% → test với best content</li>
+                <li>Nếu CPL < target → mở lên 3%</li>
+                <li>AI suggest budget reallocation weekly</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEAD SYSTEM -->
+      <section class="section" id="leads">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">6. Lead System</span>
+            <h2>Thu lead — Phân loại — Nuôi — Chốt</h2>
+            <p>Inbox DMs không phải funnel. Cần hệ thống capture, classify, nurture, handoff.</p>
+          </div>
+
+          <div class="flow-row">
+            <div class="flow-step" style="background:rgba(121,184,255,0.1);border-radius:16px;padding:16px;color:var(--blue);">
+              <strong>Capture</strong><br/>
+              <span style="font-size:12px;color:var(--muted);">Comment, DM, Form, Zalo</span>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step" style="background:rgba(210,168,255,0.1);border-radius:16px;padding:16px;color:var(--purple);">
+              <strong>Classify</strong><br/>
+              <span style="font-size:12px;color:var(--muted);">Buyer / Investor / Broker</span>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step" style="background:rgba(243,197,107,0.1);border-radius:16px;padding:16px;color:var(--gold);">
+              <strong>Auto-Reply</strong><br/>
+              <span style="font-size:12px;color:var(--muted);">Gửi kit phù hợp < 5 phút</span>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step" style="background:rgba(126,231,135,0.1);border-radius:16px;padding:16px;color:var(--green);">
+              <strong>Handoff</strong><br/>
+              <span style="font-size:12px;color:var(--muted);">Sales nhận lead nóng</span>
+            </div>
+          </div>
+
+          <div class="card-grid two" style="margin-top:24px;">
+            <article class="info-card">
+              <h3>Lead Scoring</h3>
+              <ul>
+                <li><strong>+1:</strong> Xem video >50%</li>
+                <li><strong>+2:</strong> Save hoặc share bài</li>
+                <li><strong>+3:</strong> Comment hỏi thông tin</li>
+                <li><strong>+5:</strong> Inbox hỏi giá / chính sách</li>
+                <li><strong>+8:</strong> Hỏi pháp lý + muốn hẹn xem</li>
+                <li><strong>≥10:</strong> → Hot lead → Notify sales ngay</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>Auto-Reply Kits</h3>
+              <ul>
+                <li><strong>Kit Buyer:</strong> PDF tổng quan + ảnh đẹp + link pháp lý</li>
+                <li><strong>Kit Investor:</strong> PDF thị trường + chính sách + ROI analysis</li>
+                <li><strong>Kit Broker:</strong> Tờ rơi + standee + objection scripts + chính sách hoa hồng</li>
+                <li><strong>Kit Follow-up:</strong> Sau 3 ngày không reply → nhắc nhẹ</li>
+                <li><strong>Kit Event:</strong> Khi có sự kiện → invite tham dự</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BROKER COPILOT -->
+      <section class="section alt" id="broker">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">7. Broker Copilot</span>
+            <h2>Nhân bản phân phối qua môi giới</h2>
+            <p>100 brokers đăng cùng 1 thông điệp chuẩn > 1 fanpage đăng 100 bài. Broker là kênh scale lớn nhất.</p>
+          </div>
+
+          <div class="card-grid two">
+            <article class="info-card">
+              <span class="tag tag-broker">Daily Kit (7h sáng)</span>
+              <h3>Mỗi ngày broker nhận:</h3>
+              <ul>
+                <li><strong>1 bài đăng ready-to-publish</strong> — copy + paste, không cần sửa</li>
+                <li><strong>3-5 ảnh branded</strong> — đã overlay logo, sẵn sàng post</li>
+                <li><strong>1 voice-note script</strong> — 30s để gửi Zalo cho khách</li>
+                <li><strong>3 objection replies</strong> — "Giá cao quá" → "So sánh với..." </li>
+                <li><strong>1 market update</strong> — tin tức khu vực ngắn gọn</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-broker">Compliance</span>
+              <h3>Kiểm soát thông điệp</h3>
+              <ul>
+                <li>Tất cả content từ source chính thức → không sai</li>
+                <li>Broker không tự soạn = không sai thông tin</li>
+                <li>Mỗi kit có disclaimer: "Thông tin tham khảo, liên hệ CĐT để xác nhận"</li>
+                <li>Weekly check: random audit 5 bài broker đã đăng</li>
+              </ul>
+              <h4>Distribution</h4>
+              <ul>
+                <li>Zalo group nội bộ (push kit mỗi sáng)</li>
+                <li>Google Drive shared (tài liệu nặng)</li>
+                <li>Telegram channel (optional, cho team lớn)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WEEKLY RHYTHM -->
+      <section class="section" id="rhythm">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">8. Vận hành hàng tuần</span>
+            <h2>Operating Rhythm — AI làm, người duyệt</h2>
+            <p>Mỗi tuần có rhythm rõ ràng. AI chạy pipeline, con người chỉ approve và optimize.</p>
+          </div>
+
+          <div class="rhythm-grid">
+            <div class="rhythm-day highlight">
+              <span class="day-name">T2</span>
+              <strong style="color:var(--purple);">🏭 Generate</strong><br/>
+              AI sinh batch 7 ngày<br/>
+              <span style="font-size:11px;color:var(--muted);">~56 outputs (7 days × 8 formats)</span>
+            </div>
+            <div class="rhythm-day">
+              <span class="day-name">T3</span>
+              <strong style="color:var(--blue);">✅ Review</strong><br/>
+              Human duyệt batch<br/>
+              <span style="font-size:11px;color:var(--muted);">Approve / Edit / Reject</span>
+            </div>
+            <div class="rhythm-day">
+              <span class="day-name">T4</span>
+              <strong style="color:var(--green);">📡 Post</strong><br/>
+              Auto-post theo lịch<br/>
+              <span style="font-size:11px;color:var(--muted);">+ Monitor engagement</span>
+            </div>
+            <div class="rhythm-day">
+              <span class="day-name">T5</span>
+              <strong style="color:var(--green);">📡 Post</strong><br/>
+              Tiếp tục post<br/>
+              <span style="font-size:11px;color:var(--muted);">+ Reply inbox < 30 min</span>
+            </div>
+            <div class="rhythm-day highlight">
+              <span class="day-name">T6</span>
+              <strong style="color:var(--gold);">📊 Analyze</strong><br/>
+              Đo performance<br/>
+              <span style="font-size:11px;color:var(--muted);">Winner / Loser report</span>
+            </div>
+            <div class="rhythm-day">
+              <span class="day-name">T7</span>
+              <strong style="color:var(--red);">🚀 Boost</strong><br/>
+              Paid cho winners<br/>
+              <span style="font-size:11px;color:var(--muted);">Weekend = high engagement</span>
+            </div>
+            <div class="rhythm-day">
+              <span class="day-name">CN</span>
+              <strong style="color:var(--cyan);">📋 Plan</strong><br/>
+              Chuẩn bị tuần mới<br/>
+              <span style="font-size:11px;color:var(--muted);">Update winner playbook</span>
+            </div>
+          </div>
+
+          <div class="info-card" style="margin-top: 24px;">
+            <h3>Thời gian con người cần bỏ ra</h3>
+            <div class="card-grid three" style="margin-top:16px;">
+              <div style="text-align:center;">
+                <div style="font-size:36px;font-weight:800;color:var(--green);">2h</div>
+                <div style="color:var(--muted);font-size:14px;">T2: Duyệt batch content</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-size:36px;font-weight:800;color:var(--gold);">30 min</div>
+                <div style="color:var(--muted);font-size:14px;">Mỗi ngày: Check inbox + reply</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-size:36px;font-weight:800;color:var(--purple);">1h</div>
+                <div style="color:var(--muted);font-size:14px;">T6: Review report + optimize</div>
+              </div>
+            </div>
+            <p style="margin-top:16px;text-align:center;"><strong>Tổng: ~6.5h/tuần</strong> thay vì 20-30h/tuần làm thủ công</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- KPI DASHBOARD -->
+      <section class="section alt" id="kpi">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">9. KPI Dashboard</span>
+            <h2>Chỉ số đo lường — theo giai đoạn</h2>
+          </div>
+
+          <div class="card-grid four">
+            <article class="info-card">
+              <span class="tag tag-pipeline">Tuần 1</span>
+              <h3>Nhận diện</h3>
+              <ul>
+                <li>Reach: <strong>10,000+</strong></li>
+                <li>Video views: <strong>3,000+</strong></li>
+                <li>Profile visits: <strong>+50%</strong></li>
+                <li>Branded search: <strong>baseline</strong></li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-broker">Tuần 2</span>
+              <h3>Engagement</h3>
+              <ul>
+                <li>Save/share: <strong>100+</strong></li>
+                <li>Comments: <strong>50+</strong></li>
+                <li>DMs: <strong>20+</strong></li>
+                <li>Carousel completion: <strong>60%+</strong></li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-test">Tuần 3</span>
+              <h3>Lead Gen</h3>
+              <ul>
+                <li>Total DMs: <strong>50+</strong></li>
+                <li>Qualified leads: <strong>25+</strong></li>
+                <li>File requests: <strong>30+</strong></li>
+                <li>Broker sign-ups: <strong>10+</strong></li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span class="tag tag-paid">Tuần 4</span>
+              <h3>Conversion</h3>
+              <ul>
+                <li>Sales handoffs: <strong>15+</strong></li>
+                <li>Site visit bookings: <strong>8+</strong></li>
+                <li>CPL (paid): <strong>< 150k</strong></li>
+                <li>ROAS: <strong>> 3x</strong></li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="info-card" style="margin-top:24px;">
+            <h3>North Star Metric</h3>
+            <p style="font-size:20px;color:var(--gold);font-weight:700;text-align:center;margin:16px 0;">
+              Số lượng Qualified Leads bàn giao cho Sales mỗi tuần
+            </p>
+            <p style="text-align:center;">Mọi hoạt động — content, paid, broker, testing — đều phải dẫn về con số này.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 30-DAY SOP -->
+      <section class="section" id="sop">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">10. SOP 30 ngày</span>
+            <h2>Kế hoạch triển khai chi tiết</h2>
+            <p>Tuần nào làm gì, ai làm, output là gì. Không mơ hồ.</p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="t-num">W0</div>
+              <div>
+                <h3>Setup (Trước khi bắt đầu)</h3>
+                <p><strong>Duration:</strong> 2-3 ngày</p>
+                <ul style="margin-top:10px;padding-left:18px;color:var(--muted);line-height:1.8;">
+                  <li>Ingest toàn bộ 9 folder Drive → build knowledge base JSON</li>
+                  <li>Setup model routing (Fast / Quality / Checker)</li>
+                  <li>Tạo template cho 8 output formats</li>
+                  <li>Setup lead tracking (Google Sheet / CRM)</li>
+                  <li>Chuẩn bị 3 auto-reply kits (Buyer, Investor, Broker)</li>
+                  <li>Phân loại ảnh: ngày/chiều/đêm/sự kiện</li>
+                  <li>Cắt phim dự án thành 5 clips ngắn</li>
+                  <li>Setup Zalo OA hoặc Messenger bot (nếu có)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="t-num">W1</div>
+              <div>
+                <h3>Tuần 1 — Launch & Nhận diện</h3>
+                <p><strong>Goal:</strong> 10,000 reach, establish brand presence</p>
+                <ul style="margin-top:10px;padding-left:18px;color:var(--muted);line-height:1.8;">
+                  <li>AI generate batch 7 ngày (56 outputs) → human review</li>
+                  <li>Post daily: FB (long + short) + Reel/TikTok</li>
+                  <li>Push broker kit #1 qua Zalo group</li>
+                  <li>Test 5 hooks khác nhau cho bài giới thiệu</li>
+                  <li>Cuối tuần: báo cáo reach, views, engagement</li>
+                  <li><strong>Paid:</strong> Chưa boost (thu thập data organic trước)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="t-num">W2</div>
+              <div>
+                <h3>Tuần 2 — Thuyết phục & Test</h3>
+                <p><strong>Goal:</strong> 50+ saves, 20+ DMs, identify winning hooks</p>
+                <ul style="margin-top:10px;padding-left:18px;color:var(--muted);line-height:1.8;">
+                  <li>Content: thị trường, mặt bằng, chính sách</li>
+                  <li>A/B test: top 3 hooks từ W1 × 3 CTAs mới</li>
+                  <li>Bắt đầu boost bài có save rate > 3%</li>
+                  <li>Activate auto-reply cho inbox (Kit Buyer + Kit Investor)</li>
+                  <li>Broker kit #2: thêm objection scripts</li>
+                  <li>Review: DM quality, lead scoring accuracy</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="t-num">W3</div>
+              <div>
+                <h3>Tuần 3 — Scale & Nurture</h3>
+                <p><strong>Goal:</strong> 25+ qualified leads, retarget active</p>
+                <ul style="margin-top:10px;padding-left:18px;color:var(--muted);line-height:1.8;">
+                  <li>Scale winning content (đã biết hook nào thắng)</li>
+                  <li>Activate retargeting: video viewers → pháp lý/CTA</li>
+                  <li>Create lookalike audience từ DM openers</li>
+                  <li>Content: pháp lý trust, investor angle, social proof</li>
+                  <li>Nurture: follow-up DMs chưa reply sau 3 ngày</li>
+                  <li>Broker kit #3: case study / FAQ từ lead thật</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="t-num">W4</div>
+              <div>
+                <h3>Tuần 4 — Convert & Optimize</h3>
+                <p><strong>Goal:</strong> 15+ sales handoffs, 8+ site visits</p>
+                <ul style="margin-top:10px;padding-left:18px;color:var(--muted);line-height:1.8;">
+                  <li>Heavy CTA content: inbox, đặt lịch, nhận chính sách</li>
+                  <li>Retarget tầng 3: DM openers → urgency/scarcity</li>
+                  <li>Push tất cả qualified leads → sales team</li>
+                  <li>Compile winner playbook: hooks, CTAs, formats, times</li>
+                  <li>ROI report: chi phí vs leads vs conversions</li>
+                  <li><strong>Decision:</strong> Continue, pivot, or scale up cho tháng 2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK -->
+      <section class="section alt" id="stack">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">11. Tech Stack gợi ý</span>
+            <h2>Công cụ triển khai</h2>
+          </div>
+          <div class="card-grid three">
+            <article class="info-card">
+              <h3>AI Layer</h3>
+              <ul>
+                <li><strong>Fast model:</strong> Gemini Flash / GPT-4o-mini</li>
+                <li><strong>Quality model:</strong> Claude Sonnet / GPT-4o</li>
+                <li><strong>Checker:</strong> Claude (structured output)</li>
+                <li><strong>Image gen:</strong> Ideogram / Canva AI</li>
+                <li><strong>Video:</strong> CapCut / Runway (từ phim gốc)</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>Distribution</h3>
+              <ul>
+                <li><strong>FB/IG:</strong> Meta Business Suite (schedule)</li>
+                <li><strong>TikTok:</strong> TikTok Business Center</li>
+                <li><strong>Zalo:</strong> Zalo OA Dashboard</li>
+                <li><strong>Broker kit:</strong> Zalo Group + Google Drive</li>
+                <li><strong>Ads:</strong> Meta Ads Manager</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>Lead & Analytics</h3>
+              <ul>
+                <li><strong>Lead tracking:</strong> Google Sheets / Airtable</li>
+                <li><strong>Auto-reply:</strong> ManyChat / Zalo OA chatbot</li>
+                <li><strong>Analytics:</strong> Meta Insights + custom dashboard</li>
+                <li><strong>Reporting:</strong> Auto weekly summary</li>
+                <li><strong>CRM:</strong> Hubspot Free / Google Sheets</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOURCE REFERENCE -->
+      <section class="section" id="source">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Nguồn dữ liệu</span>
+            <h2>Bộ source chính thức (kế thừa V2)</h2>
+            <p>Mọi content đều phải xuất phát từ bộ source này. Không bịa, không thêm.</p>
+          </div>
+          <div class="card-grid three">
+            <article class="info-card" style="border-left:3px solid var(--blue);">
+              <h3>Nhận diện</h3>
+              <ul>
+                <li>Tổng quan dự án PDF</li>
+                <li>Thông tin thị trường PDF</li>
+                <li>Hình ảnh dự án (44 ảnh)</li>
+                <li>Phim dự án (1 video)</li>
+              </ul>
+            </article>
+            <article class="info-card" style="border-left:3px solid var(--green);">
+              <h3>Niềm tin</h3>
+              <ul>
+                <li>Pháp lý: GPXD, QĐ, GCN</li>
+                <li>Logo & Brand Guidelines</li>
+                <li>Hình ảnh sự kiện</li>
+              </ul>
+            </article>
+            <article class="info-card" style="border-left:3px solid var(--gold);">
+              <h3>Chuyển đổi</h3>
+              <ul>
+                <li>Chính sách bán hàng PDF</li>
+                <li>Standee + Tờ rơi</li>
+                <li>Mặt bằng tổng thể PNG</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-wrap">
+        <div>
+          <strong>AI Marketing Plan V3 — DKRA Hiệp Phước Premia</strong>
+          <p>Hệ thống marketing tự vận hành: AI pipeline → content factory → lead engine → broker copilot.</p>
+        </div>
+        <div style="text-align:right;">
+          <strong>Phiên bản</strong>
+          <p>V3.0 — Cập nhật 2026-04-02<br/>
+          <a href="index.html" style="color:var(--blue);">← Xem V2</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
