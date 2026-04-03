@@ -1,0 +1,1077 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Marketing Plan V4 — Hiệp Phước Premia × OpenClaw</title>
+  <meta name="description" content="Kế hoạch V4 — Kasa agent chạy toàn bộ marketing pipeline mà không cần ManyChat, Airtable, hay HubSpot. OpenClaw-native." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #080e1a;
+  --panel: rgba(255,255,255,0.05);
+  --panel-strong: rgba(255,255,255,0.09);
+  --text: #eef3fb;
+  --muted: #9fb3cc;
+  --line: rgba(255,255,255,0.10);
+  --gold: #f5c842;
+  --blue: #6eb6ff;
+  --green: #6fdb8a;
+  --red: #f87171;
+  --purple: #c084fc;
+  --cyan: #38bdf8;
+  --orange: #fb923c;
+  --accent: linear-gradient(135deg, #6eb6ff 0%, #c084fc 50%, #f5c842 100%);
+  --radius: 22px;
+  --shadow: 0 16px 48px rgba(0,0,0,0.4);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  background:
+    radial-gradient(ellipse at 15% 0%, rgba(192,132,252,0.15), transparent 38%),
+    radial-gradient(ellipse at 85% 5%, rgba(245,200,66,0.12), transparent 32%),
+    radial-gradient(ellipse at 50% 95%, rgba(110,182,255,0.10), transparent 38%),
+    #080e1a;
+  color: var(--text);
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+.section { padding: 72px 0; }
+.section.alt { background: rgba(255,255,255,0.02); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+/* Typography */
+.eyebrow {
+  display: inline-block; padding: 7px 14px;
+  border: 1px solid rgba(255,255,255,0.13); border-radius: 999px;
+  color: var(--purple); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700;
+}
+.section-head { max-width: 760px; margin-bottom: 40px; }
+.section-head h2 { margin: 10px 0 12px; font-size: clamp(26px, 3.8vw, 46px); line-height: 1.05; letter-spacing: -0.03em; }
+.section-head p { color: var(--muted); font-size: 16px; line-height: 1.8; }
+
+/* Hero */
+.hero { padding: 64px 0 48px; }
+.hero h1 { font-size: clamp(34px, 5.5vw, 70px); line-height: 0.95; letter-spacing: -0.04em; margin: 16px 0; }
+.hero h1 .g { background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.lede { color: var(--muted); font-size: 17px; line-height: 1.85; max-width: 740px; }
+.hero-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 24px; align-items: start; }
+.hero-actions { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 700; font-size: 14px;
+  border: 1px solid transparent; transition: .2s ease; cursor: pointer;
+}
+.btn-primary { background: var(--accent); color: #08111f; }
+.btn-secondary { border-color: var(--line); background: rgba(255,255,255,0.05); }
+.toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.toc a { padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; font-weight: 600; transition: .2s; }
+.toc a:hover { background: rgba(255,255,255,0.07); }
+
+/* Glass card */
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+  border: 1px solid var(--line); backdrop-filter: blur(16px);
+  border-radius: var(--radius); box-shadow: var(--shadow); padding: 26px;
+}
+
+/* Version badge */
+.version-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(110,182,255,0.12); border: 1px solid rgba(110,182,255,0.3);
+  padding: 6px 16px; border-radius: 999px; font-size: 13px; font-weight: 700; color: var(--blue);
+}
+
+/* Cards */
+.card-grid { display: grid; gap: 16px; }
+.card-grid.two   { grid-template-columns: repeat(2, 1fr); }
+.card-grid.three { grid-template-columns: repeat(3, 1fr); }
+.card-grid.four  { grid-template-columns: repeat(4, 1fr); }
+.card {
+  background: rgba(255,255,255,0.04); border: 1px solid var(--line);
+  border-radius: 20px; padding: 24px;
+}
+.card h3 { margin: 0 0 10px; font-size: 19px; }
+.card h4 { margin: 14px 0 7px; font-size: 14px; color: var(--gold); font-weight: 700; letter-spacing: .05em; }
+.card p  { color: var(--muted); line-height: 1.75; margin: 0 0 10px; }
+.card ul { padding-left: 18px; color: var(--muted); line-height: 1.85; }
+.card li { margin-bottom: 3px; }
+.card li strong { color: var(--text); }
+
+/* Tags */
+.tag { display: inline-block; font-size: 10px; font-weight: 800; padding: 4px 11px; border-radius: 999px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
+.tag-kasa    { background: rgba(110,182,255,0.15);  color: var(--blue);   }
+.tag-cron    { background: rgba(192,132,252,0.15);  color: var(--purple); }
+.tag-gog     { background: rgba(245,200,66,0.15);   color: var(--gold);   }
+.tag-tg      { background: rgba(56,189,248,0.15);   color: var(--cyan);   }
+.tag-paid    { background: rgba(248,113,113,0.15);  color: var(--red);    }
+.tag-broker  { background: rgba(111,219,138,0.15);  color: var(--green);  }
+.tag-skill   { background: rgba(251,146,60,0.15);   color: var(--orange); }
+
+/* Pipeline */
+.pipe-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; margin: 24px 0; }
+.pipe-step { padding: 22px 14px; text-align: center; border-radius: 14px; font-weight: 700; font-size: 13px; line-height: 1.5; }
+.pipe-step .icon { font-size: 26px; margin-bottom: 7px; display: block; }
+.pipe-step .sub  { display: block; font-size: 11px; color: var(--muted); font-weight: 500; margin-top: 5px; }
+.p-a { background: rgba(110,182,255,0.10); color: var(--blue);   }
+.p-b { background: rgba(192,132,252,0.10); color: var(--purple); }
+.p-c { background: rgba(245,200,66,0.10);  color: var(--gold);   }
+.p-d { background: rgba(111,219,138,0.10); color: var(--green);  }
+.p-e { background: rgba(56,189,248,0.10);  color: var(--cyan);   }
+
+/* Flow row */
+.flow-row { display: flex; align-items: center; gap: 0; margin: 24px 0; flex-wrap: wrap; }
+.flow-step { flex: 1; min-width: 160px; padding: 16px; border-radius: 14px; font-size: 13px; font-weight: 600; text-align: center; }
+.flow-arrow { width: 28px; text-align: center; color: var(--muted); font-size: 18px; flex-shrink: 0; }
+
+/* Compare */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+.compare-card { padding: 22px; border-radius: 20px; }
+.cmp-old { background: rgba(248,113,113,0.07); border: 1px solid rgba(248,113,113,0.2); }
+.cmp-new { background: rgba(111,219,138,0.07); border: 1px solid rgba(111,219,138,0.2); }
+.compare-card h4 { font-size: 15px; margin-bottom: 12px; }
+.compare-card ul { padding-left: 18px; color: var(--muted); line-height: 1.85; }
+
+/* Code block */
+.code-block {
+  background: rgba(0,0,0,0.45); border: 1px solid var(--line); border-radius: 12px;
+  padding: 18px; margin: 14px 0;
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 12.5px; line-height: 1.8; color: var(--muted); overflow-x: auto; white-space: pre-wrap;
+}
+.code-block .c { color: #555e6d; }
+.code-block .k { color: var(--blue); }
+.code-block .v { color: var(--green); }
+.code-block .f { color: var(--purple); }
+.code-block .h { color: var(--gold); }
+
+/* Skill pill row */
+.skill-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+.skill-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--line); padding: 9px 14px; border-radius: 999px;
+  font-size: 13px; font-weight: 700;
+}
+.sp-blue   { color: var(--blue);   background: rgba(110,182,255,0.08); border-color: rgba(110,182,255,0.2); }
+.sp-purple { color: var(--purple); background: rgba(192,132,252,0.08); border-color: rgba(192,132,252,0.2); }
+.sp-gold   { color: var(--gold);   background: rgba(245,200,66,0.08);  border-color: rgba(245,200,66,0.2); }
+.sp-green  { color: var(--green);  background: rgba(111,219,138,0.08); border-color: rgba(111,219,138,0.2); }
+.sp-cyan   { color: var(--cyan);   background: rgba(56,189,248,0.08);  border-color: rgba(56,189,248,0.2); }
+.sp-orange { color: var(--orange); background: rgba(251,146,60,0.08);  border-color: rgba(251,146,60,0.2); }
+
+/* Timeline */
+.timeline { display: grid; gap: 12px; }
+.tl-item {
+  display: grid; grid-template-columns: 52px 1fr; gap: 18px; align-items: start;
+  padding: 20px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,0.03);
+}
+.tl-num {
+  width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%;
+  background: rgba(192,132,252,0.12); color: var(--purple); font-weight: 800; font-size: 16px;
+}
+.tl-item h3 { margin: 2px 0 7px; font-size: 19px; }
+.tl-item p  { color: var(--muted); line-height: 1.7; }
+
+/* Rhythm grid */
+.rhythm-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-top: 18px; }
+.r-day {
+  padding: 14px 8px; border-radius: 14px; text-align: center;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--line);
+  font-size: 12px; line-height: 1.55;
+}
+.r-day .dn { font-weight: 800; font-size: 14px; margin-bottom: 7px; display: block; }
+.r-day.hi  { border-color: var(--gold); background: rgba(245,200,66,0.05); }
+
+/* KPI cards */
+.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.kpi-card {
+  padding: 22px; border-radius: 18px; text-align: center;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--line);
+}
+.kpi-card .kn { font-size: 30px; font-weight: 800; }
+.kpi-card .kl { font-size: 11px; color: var(--muted); margin-top: 5px; text-transform: uppercase; letter-spacing: .08em; }
+
+/* Horizontal table */
+.h-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.h-table th, .h-table td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--line); font-size: 14px; }
+.h-table th { color: var(--gold); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; }
+.h-table td { color: var(--muted); }
+.h-table .badge { display: inline-block; padding: 3px 9px; border-radius: 7px; font-size: 11px; font-weight: 700; }
+.b-native  { background: rgba(111,219,138,0.15); color: var(--green); }
+.b-skill   { background: rgba(251,146,60,0.15);  color: var(--orange); }
+.b-custom  { background: rgba(110,182,255,0.15); color: var(--blue); }
+
+/* Footer */
+.footer { border-top: 1px solid var(--line); padding: 28px 0 44px; }
+.footer-wrap { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); }
+.footer-wrap strong { display: block; color: var(--text); margin-bottom: 7px; }
+
+@media (max-width: 960px) {
+  .hero-grid, .card-grid.two, .card-grid.three, .card-grid.four,
+  .compare-grid, .kpi-grid, .pipe-row { grid-template-columns: 1fr; }
+  .rhythm-grid { grid-template-columns: repeat(4, 1fr); }
+  .flow-row { flex-direction: column; }
+  .flow-arrow { transform: rotate(90deg); }
+  .footer-wrap { flex-direction: column; }
+}
+@media (max-width: 540px) {
+  .section { padding: 44px 0; }
+  .rhythm-grid { grid-template-columns: repeat(2, 1fr); }
+}
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="version-badge">🤖 V4 — OpenClaw-Native</div>
+        <h1><span class="g">Kasa chạy<br/>toàn bộ pipeline</span><br/>không cần SaaS ngoài</h1>
+        <p class="lede">
+          V3 vẫn dùng ManyChat, Airtable, HubSpot, Meta Business Suite.
+          V4 loại bỏ tất cả. <strong>Kasa</strong> — agent đang nói chuyện với bạn — 
+          là hệ thống marketing hoàn chỉnh: sinh content, gửi Telegram, lưu Google Sheets, 
+          lên lịch cron, và tự báo cáo. Không thêm subscription nào.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#why">Tại sao V4?</a>
+          <a class="btn btn-secondary" href="#pipeline">Pipeline</a>
+          <a class="btn btn-secondary" href="#skills">Skill Map</a>
+        </div>
+        <div class="toc">
+          <a href="#why">V3→V4</a>
+          <a href="#pipeline">5-Layer</a>
+          <a href="#skills">Skills</a>
+          <a href="#content">Content</a>
+          <a href="#leads">Leads</a>
+          <a href="#broker">Broker</a>
+          <a href="#cron">Cron</a>
+          <a href="#rhythm">Rhythm</a>
+          <a href="#kpi">KPI</a>
+          <a href="#sop">SOP</a>
+        </div>
+      </div>
+      <div class="glass">
+        <h3 style="margin-bottom:14px;">V4 core shifts</h3>
+        <ul style="padding-left:18px;color:var(--muted);line-height:1.95;">
+          <li><strong>Không ManyChat</strong> → Kasa trả lời Telegram/Zalo</li>
+          <li><strong>Không Airtable</strong> → Google Sheets qua <code style="color:var(--gold);">gog</code> skill</li>
+          <li><strong>Không HubSpot</strong> → Sheets + Telegram notify</li>
+          <li><strong>Không Buffer/Meta Suite</strong> → cron + message tool</li>
+          <li><strong>Không n8n / Make</strong> → OpenClaw heartbeat + skills</li>
+          <li><strong>Không Canva AI</strong> → <code style="color:var(--gold);">image_generate</code> built-in</li>
+        </ul>
+        <div class="skill-row" style="margin-top:16px;">
+          <span class="skill-pill sp-blue">🤖 Kasa agent</span>
+          <span class="skill-pill sp-gold">📊 gog skill</span>
+          <span class="skill-pill sp-cyan">📡 Telegram</span>
+          <span class="skill-pill sp-purple">⏱ cron</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- V3 → V4 -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Tại sao nâng cấp</span>
+          <h2>V3 plan → V4 system thực sự chạy được</h2>
+          <p>V3 đúng về strategy nhưng phụ thuộc 8-10 công cụ ngoài. V4 chạy ngay hôm nay với những gì đã có.</p>
+        </div>
+        <div class="compare-grid">
+          <div class="compare-card cmp-old">
+            <h4 style="color:var(--red);">❌ V3 — Cần nhiều SaaS</h4>
+            <ul>
+              <li>ManyChat cho auto-reply inbox</li>
+              <li>Airtable / HubSpot cho CRM</li>
+              <li>Meta Business Suite để schedule post</li>
+              <li>n8n / Make để nối workflow</li>
+              <li>Canva AI để tạo ảnh</li>
+              <li>Buffer / Hootsuite cho đa kênh</li>
+              <li>Google Data Studio cho dashboard</li>
+              <li>→ Chi phí $150-400/tháng + setup phức tạp</li>
+            </ul>
+          </div>
+          <div class="compare-card cmp-new">
+            <h4 style="color:var(--green);">✅ V4 — OpenClaw làm hết</h4>
+            <ul>
+              <li>Kasa trả lời Telegram/Zalo trực tiếp</li>
+              <li>CRM = Google Sheets via <code style="color:var(--gold);">gog</code> skill</li>
+              <li>Schedule = OpenClaw cron jobs</li>
+              <li>Workflow nối = heartbeat + skills</li>
+              <li>Ảnh = <code style="color:var(--gold);">image_generate</code> tool built-in</li>
+              <li>Phân phối = Telegram groups + message tool</li>
+              <li>Reports = Kasa tự generate + gửi Telegram</li>
+              <li>→ $0 thêm. Chạy ngay. Kasa control tất cả.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-LAYER PIPELINE -->
+    <section class="section alt" id="pipeline">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">1. Kiến trúc hệ thống</span>
+          <h2>5-Layer OpenClaw Pipeline</h2>
+          <p>V4 thêm Layer E: Reporting tự động. Kasa là não trung tâm điều phối cả 5 tầng.</p>
+        </div>
+
+        <div class="pipe-row">
+          <div class="pipe-step p-a">
+            <span class="icon">📥</span>
+            Layer A<br/>Ingestion
+            <span class="sub">web_fetch + pdf → Knowledge Base</span>
+          </div>
+          <div class="pipe-step p-b">
+            <span class="icon">🏭</span>
+            Layer B<br/>Content Factory
+            <span class="sub">Claude + image_generate</span>
+          </div>
+          <div class="pipe-step p-c">
+            <span class="icon">📡</span>
+            Layer C<br/>Distribution
+            <span class="sub">message tool + cron</span>
+          </div>
+          <div class="pipe-step p-d">
+            <span class="icon">🎯</span>
+            Layer D<br/>Lead Engine
+            <span class="sub">Telegram → gog Sheets</span>
+          </div>
+          <div class="pipe-step p-e">
+            <span class="icon">📊</span>
+            Layer E<br/>Auto-Reporting
+            <span class="sub">Kasa → Telegram daily KPI</span>
+          </div>
+        </div>
+
+        <div class="card-grid two">
+          <div class="card">
+            <span class="tag tag-kasa">Layer A</span>
+            <h3>📥 Ingestion — Không thủ công</h3>
+            <h4>Cách chạy</h4>
+            <ul>
+              <li>Kasa dùng <code style="color:var(--blue);">pdf</code> tool để parse tài liệu dự án</li>
+              <li><code style="color:var(--blue);">web_fetch</code> để thu thập tin thị trường</li>
+              <li><code style="color:var(--blue);">web_search</code> cho competitive intel hàng tuần</li>
+              <li>Kết quả lưu vào <code style="color:var(--gold);">knowledge-base.json</code> trong workspace</li>
+            </ul>
+            <h4>Trigger</h4>
+            <ul>
+              <li>Cron mỗi thứ Hai 7h sáng: refresh market intel</li>
+              <li>P upload tài liệu mới → Kasa tự parse ngay</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag tag-kasa">Layer B</span>
+            <h3>🏭 Content Factory — Built-in Claude</h3>
+            <h4>Không cần tool ngoài</h4>
+            <ul>
+              <li>Claude (chính Kasa) sinh 8 output formats từ 1 brief</li>
+              <li><code style="color:var(--blue);">image_generate</code> tạo ảnh branded với overlay</li>
+              <li>Fast model cho drafts → Quality model cho final</li>
+              <li>Kết quả lưu vào <code style="color:var(--gold);">content/queue/YYYY-MM-DD.md</code></li>
+            </ul>
+            <h4>Human review</h4>
+            <ul>
+              <li>Kasa gửi batch qua Telegram để P approve</li>
+              <li>P reply "✅ approve" hoặc edit trực tiếp</li>
+              <li>Sau approve → content vào publish queue</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag tag-tg">Layer C</span>
+            <h3>📡 Distribution — message tool</h3>
+            <h4>Cách phân phối</h4>
+            <ul>
+              <li><strong>Broker Zalo group:</strong> Kasa gửi Telegram → P forward/repost</li>
+              <li><strong>Facebook:</strong> Kasa chuẩn bị copy + ảnh → P post (hoặc browser tool)</li>
+              <li><strong>Cron schedule:</strong> OpenClaw cron trigger Kasa đúng giờ</li>
+              <li><strong>Broker kit:</strong> Kasa push qua Telegram group tự động</li>
+            </ul>
+            <h4>Giới hạn thực tế</h4>
+            <ul>
+              <li>Facebook API cần Page token (P setup 1 lần) → Kasa dùng API trực tiếp</li>
+              <li>Zalo OA: Kasa soạn, P paste (hoặc Zalo API nếu có key)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag tag-gog">Layer D</span>
+            <h3>🎯 Lead Engine — gog + Telegram</h3>
+            <h4>Flow thu lead</h4>
+            <ul>
+              <li>Lead inbox Telegram → Kasa classify ngay</li>
+              <li>Kasa log vào Google Sheets via <code style="color:var(--gold);">gog</code> skill</li>
+              <li>Hot lead (score ≥ 10) → Kasa notify P ngay lập tức</li>
+              <li>Auto-reply: Kasa gửi kit phù hợp < 5 phút</li>
+            </ul>
+            <div class="code-block"><span class="c">// Lead record tự động ghi vào Sheets</span>
+{
+  <span class="k">"timestamp"</span>: <span class="v">"2026-04-03 22:00"</span>,
+  <span class="k">"name"</span>: <span class="v">"Anh Minh"</span>,
+  <span class="k">"channel"</span>: <span class="v">"Telegram"</span>,
+  <span class="k">"intent"</span>: <span class="v">"Investor - hỏi giá + ROI"</span>,
+  <span class="k">"score"</span>: <span class="v">13</span>,
+  <span class="k">"status"</span>: <span class="v">"HOT → notified P"</span>,
+  <span class="k">"kit_sent"</span>: <span class="v">"Kit Investor v2"</span>
+}</div>
+          </div>
+        </div>
+
+        <!-- Layer E separate -->
+        <div class="card" style="margin-top:16px; border-color: rgba(245,200,66,0.25);">
+          <span class="tag tag-cron">Layer E — MỚI trong V4</span>
+          <h3>📊 Auto-Reporting — Kasa tự báo cáo</h3>
+          <div class="card-grid three" style="margin-top:16px;">
+            <div>
+              <h4>Daily (7h sáng)</h4>
+              <ul>
+                <li>Đếm leads hôm qua từ Sheets</li>
+                <li>Tóm tắt hot leads cần follow-up</li>
+                <li>Content đăng hôm nay là gì</li>
+                <li>Gửi qua Telegram DM cho P</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Weekly (T6 17h)</h4>
+              <ul>
+                <li>Total reach / engagement / DMs</li>
+                <li>Top 3 winning hooks tuần này</li>
+                <li>Leads qualified: X / target Y</li>
+                <li>Budget paid ads vs results</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Alert (real-time)</h4>
+              <ul>
+                <li>Hot lead vào (score ≥ 10)</li>
+                <li>Form submit từ landing page</li>
+                <li>Cron job fail</li>
+                <li>Content queue sắp hết</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILL MAP -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">2. Skill Map</span>
+          <h2>OpenClaw skills thay thế mọi SaaS</h2>
+          <p>Mỗi công cụ cũ đều có skill tương đương. Cài một lần, dùng mãi.</p>
+        </div>
+
+        <table class="h-table">
+          <thead>
+            <tr>
+              <th>Công việc</th>
+              <th>V3 dùng (SaaS ngoài)</th>
+              <th>V4 dùng (OpenClaw)</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sinh nội dung 8 formats</td>
+              <td style="color:var(--red);">ChatGPT UI / Jasper</td>
+              <td><strong>Claude built-in</strong> (Kasa chính là Claude)</td>
+              <td><span class="badge b-native">✅ Native</span></td>
+            </tr>
+            <tr>
+              <td>Tạo ảnh branded</td>
+              <td style="color:var(--red);">Canva AI / Ideogram</td>
+              <td><strong>image_generate</strong> tool built-in</td>
+              <td><span class="badge b-native">✅ Native</span></td>
+            </tr>
+            <tr>
+              <td>CRM / Lead tracking</td>
+              <td style="color:var(--red);">Airtable / HubSpot</td>
+              <td><strong>gog skill</strong> → Google Sheets</td>
+              <td><span class="badge b-skill">📦 Skill</span></td>
+            </tr>
+            <tr>
+              <td>Lịch & Reminder</td>
+              <td style="color:var(--red);">Calendly / Notion</td>
+              <td><strong>gog skill</strong> → Google Calendar</td>
+              <td><span class="badge b-skill">📦 Skill</span></td>
+            </tr>
+            <tr>
+              <td>Auto-reply inbox</td>
+              <td style="color:var(--red);">ManyChat / Chatfuel</td>
+              <td><strong>Kasa</strong> reply Telegram trực tiếp</td>
+              <td><span class="badge b-native">✅ Native</span></td>
+            </tr>
+            <tr>
+              <td>Schedule post</td>
+              <td style="color:var(--red);">Meta Business Suite / Buffer</td>
+              <td><strong>cron</strong> trigger Kasa → message tool</td>
+              <td><span class="badge b-native">✅ Native</span></td>
+            </tr>
+            <tr>
+              <td>Workflow automation</td>
+              <td style="color:var(--red);">n8n / Make / Zapier</td>
+              <td><strong>heartbeat</strong> + skills + cron</td>
+              <td><span class="badge b-native">✅ Native</span></td>
+            </tr>
+            <tr>
+              <td>KPI dashboard</td>
+              <td style="color:var(--red);">Looker Studio / Notion</td>
+              <td><strong>Kasa</strong> tự generate báo cáo Telegram</td>
+              <td><span class="badge b-native">✅ Native</span></td>
+            </tr>
+            <tr>
+              <td>Market intel / news</td>
+              <td style="color:var(--red);">Google Alerts / Feedly</td>
+              <td><strong>blogwatcher skill</strong> + web_search</td>
+              <td><span class="badge b-skill">📦 Skill</span></td>
+            </tr>
+            <tr>
+              <td>Broker kit distribution</td>
+              <td style="color:var(--red);">Zalo manual / Drive link</td>
+              <td><strong>Telegram group</strong> push via message tool</td>
+              <td><span class="badge b-native">✅ Native</span></td>
+            </tr>
+            <tr>
+              <td>Facebook Page posting</td>
+              <td style="color:var(--red);">Meta Business Suite</td>
+              <td><strong>browser tool</strong> hoặc Facebook API custom skill</td>
+              <td><span class="badge b-custom">🔧 Custom skill</span></td>
+            </tr>
+            <tr>
+              <td>Parse tài liệu PDF</td>
+              <td style="color:var(--red);">Adobe Acrobat / manual</td>
+              <td><strong>pdf tool</strong> built-in</td>
+              <td><span class="badge b-native">✅ Native</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="card" style="margin-top:20px;">
+          <h3>Skills cần cài từ Clawhub</h3>
+          <div class="skill-row">
+            <span class="skill-pill sp-gold">📊 gog — Google Workspace</span>
+            <span class="skill-pill sp-cyan">📰 blogwatcher — RSS feeds</span>
+            <span class="skill-pill sp-orange">🔧 Custom: facebook-post skill</span>
+            <span class="skill-pill sp-purple">🔔 Custom: lead-intake skill</span>
+          </div>
+          <p style="color:var(--muted);margin-top:14px;font-size:14px;">
+            <strong>gog</strong> và <strong>blogwatcher</strong> đã có trên Clawhub — cài bằng lệnh. 
+            Facebook post skill và lead-intake skill Kasa có thể tự build.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT FACTORY -->
+    <section class="section alt" id="content">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">3. Content Factory</span>
+          <h2>Kasa sinh content — P approve — cron post</h2>
+          <p>Không cần mở thêm tab. Kasa làm trong workspace, P approve qua Telegram, cron chạy đúng giờ.</p>
+        </div>
+
+        <div class="flow-row">
+          <div class="flow-step p-a" style="border-radius:14px;">
+            <strong>Brief từ P</strong><br/>
+            <span style="font-size:11px;color:var(--muted);">Telegram hoặc cron trigger</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step p-b" style="border-radius:14px;">
+            <strong>Kasa generate</strong><br/>
+            <span style="font-size:11px;color:var(--muted);">Claude + image_generate</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step p-c" style="border-radius:14px;">
+            <strong>P approve</strong><br/>
+            <span style="font-size:11px;color:var(--muted);">Reply ✅ hoặc edit</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step p-d" style="border-radius:14px;">
+            <strong>Queue → cron post</strong><br/>
+            <span style="font-size:11px;color:var(--muted);">Đúng giờ, đúng kênh</span>
+          </div>
+        </div>
+
+        <div class="card-grid two">
+          <div class="card">
+            <span class="tag tag-kasa">Output formats</span>
+            <h3>1 brief → 8 outputs</h3>
+            <div class="code-block"><span class="c">// Kasa tự sinh, lưu vào content/queue/</span>
+
+<span class="f">1. fb_long.md</span>   <span class="v">← bài dài 300 từ, storytelling</span>
+<span class="f">2. fb_short.md</span>  <span class="v">← hook 50 từ + CTA</span>
+<span class="f">3. reel.md</span>      <span class="v">← script 20s, voiceover</span>
+<span class="f">4. tiktok.md</span>    <span class="v">← hook 15s, trending format</span>
+<span class="f">5. carousel.md</span>  <span class="v">← 6 slides copy</span>
+<span class="f">6. zalo.md</span>      <span class="v">← tone tư vấn, formal</span>
+<span class="f">7. broker.md</span>    <span class="v">← sales script + objections</span>
+<span class="f">8. ad_copy.md</span>   <span class="v">← 3 variants pain/gain/fear</span>
+
+<span class="h">+ cover_image.png</span> <span class="c">← image_generate tự render</span></div>
+          </div>
+          <div class="card">
+            <span class="tag tag-cron">Cron schedule</span>
+            <h3>Tự động không cần mở app</h3>
+            <div class="code-block"><span class="c">// OpenClaw cron jobs</span>
+
+<span class="h">Mon 06:00</span>  <span class="v">Kasa generate weekly batch</span>
+<span class="h">Mon 08:00</span>  <span class="v">Kasa send batch to P for review</span>
+<span class="h">Daily 07:00</span> <span class="v">Push broker kit qua Telegram group</span>
+<span class="h">Daily 08:30</span> <span class="v">Post FB morning content (nếu có API)</span>
+<span class="h">Daily 19:30</span> <span class="v">Post FB evening content</span>
+<span class="h">Fri 17:00</span>   <span class="v">Kasa generate weekly KPI report</span>
+<span class="h">Mon 07:00</span>   <span class="v">web_search market intel refresh</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAD ENGINE -->
+    <section class="section" id="leads">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">4. Lead Engine</span>
+          <h2>Kasa là CRM — gog là database</h2>
+          <p>Không cần HubSpot. Kasa classify intent ngay khi nhận Telegram, lưu Google Sheets, alert P khi hot.</p>
+        </div>
+
+        <div class="card-grid two">
+          <div class="card">
+            <span class="tag tag-tg">Capture → Classify</span>
+            <h3>Kasa nhận và phân loại ngay</h3>
+            <h4>Nguồn lead</h4>
+            <ul>
+              <li>Telegram DM vào Kasa bot</li>
+              <li>Comment trigger "TÀI LIỆU", "GIÁ", "PHÁP LÝ"</li>
+              <li>Landing page form submit (webhook → Telegram)</li>
+              <li>Zalo OA: Kasa soạn reply, P paste</li>
+            </ul>
+            <h4>Phân loại (Claude classify)</h4>
+            <ul>
+              <li><strong>🏠 Buyer:</strong> ở thực, tiện ích, trường → Kit Buyer</li>
+              <li><strong>💰 Investor:</strong> ROI, giá, khu vực → Kit Investor</li>
+              <li><strong>🤝 Broker:</strong> hoa hồng, hợp tác → Kit Broker</li>
+              <li><strong>❓ Unclear:</strong> Kasa hỏi thêm 1 câu qualifying</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag tag-gog">gog Sheets CRM</span>
+            <h3>Database không tốn tiền</h3>
+            <h4>Sheet structure</h4>
+            <div class="code-block"><span class="c">// Tab: Leads</span>
+<span class="k">Date | Name | Channel | Intent</span>
+<span class="k">Score | Kit Sent | Status | Notes</span>
+<span class="k">Follow-up Date | Sales Owner</span>
+
+<span class="c">// Tab: Content Performance  </span>
+<span class="k">Date | Post | Platform | Reach</span>
+<span class="k">Saves | DMs | Hook Rate | Winner?</span>
+
+<span class="c">// Tab: Broker Activity</span>
+<span class="k">Broker | Kit Sent | Posts | Leads</span></div>
+            <h4>Auto-update</h4>
+            <ul>
+              <li>Kasa ghi Sheets khi có lead mới</li>
+              <li>Kasa update status khi follow-up xong</li>
+              <li>Weekly: Kasa pull Sheets data → báo cáo</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h3>Lead Scoring — Kasa tính tự động</h3>
+          <div class="card-grid three" style="margin-top:14px;">
+            <div>
+              <h4>Tín hiệu yếu (+1-3)</h4>
+              <ul>
+                <li>+1 Xem video >50%</li>
+                <li>+2 Save / share bài</li>
+                <li>+3 Comment hỏi thông tin</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Tín hiệu mạnh (+5-8)</h4>
+              <ul>
+                <li>+5 Inbox hỏi giá / chính sách</li>
+                <li>+6 Yêu cầu tài liệu pháp lý</li>
+                <li>+8 Hỏi đặt lịch xem dự án</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Alert ngưỡng</h4>
+              <ul>
+                <li>≥ 10: 🔥 HOT → Kasa ping P ngay</li>
+                <li>5-9: Warm → vào nurture queue</li>
+                <li>1-4: Cold → auto content drip</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BROKER COPILOT -->
+    <section class="section alt" id="broker">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">5. Broker Copilot</span>
+          <h2>Kasa push kit mỗi sáng — broker chỉ paste</h2>
+          <p>Cron 7h sáng, Kasa gửi daily kit vào Telegram group broker. Không cần Zalo manual, không cần Drive share.</p>
+        </div>
+
+        <div class="card-grid two">
+          <div class="card">
+            <span class="tag tag-broker">Daily Kit — 7h sáng</span>
+            <h3>Broker nhận mỗi ngày</h3>
+            <ul>
+              <li><strong>1 bài đăng FB</strong> — ready, copy-paste</li>
+              <li><strong>1 ảnh branded</strong> — image_generate render</li>
+              <li><strong>1 đoạn Zalo</strong> — gửi cho khách</li>
+              <li><strong>3 objection scripts</strong> — "Giá cao" → "So sánh..."</li>
+              <li><strong>1 market tip</strong> — 2-3 câu tin tức khu vực</li>
+            </ul>
+            <h4>Cách Kasa deliver</h4>
+            <ul>
+              <li>Cron 7h → Kasa generate kit từ content queue</li>
+              <li>message tool → push vào Telegram group broker</li>
+              <li>Ảnh đính kèm inline, text đã format sẵn</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag tag-broker">Broker Lead Capture</span>
+            <h3>Lead từ broker → vào CRM</h3>
+            <ul>
+              <li>Broker nhận lead → forward vào Telegram Kasa</li>
+              <li>Kasa classify + score ngay</li>
+              <li>Log vào Sheets tab Broker Activity</li>
+              <li>Nếu hot: Kasa alert P, gắn broker name để tính hoa hồng</li>
+            </ul>
+            <h4>Leaderboard (weekly)</h4>
+            <ul>
+              <li>Kasa pull Sheets → tổng hợp top brokers tuần</li>
+              <li>Post leaderboard vào group mỗi thứ Sáu</li>
+              <li>Gamification: tạo động lực cạnh tranh tích cực</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRON SETUP -->
+    <section class="section" id="cron">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">6. Cron Jobs</span>
+          <h2>Tất cả chạy tự động — không cần mở máy</h2>
+          <p>OpenClaw cron thay thế toàn bộ n8n, Make, Zapier. Kasa là worker thực thi.</p>
+        </div>
+
+        <div class="card-grid two">
+          <div class="card">
+            <span class="tag tag-cron">Daily crons</span>
+            <h3>Việc chạy mỗi ngày</h3>
+            <div class="code-block"><span class="h">06:00</span> <span class="v">Market intel refresh</span>
+      <span class="c">→ web_search khu vực Nhà Bè, Long An</span>
+      <span class="c">→ Update knowledge-base.json</span>
+
+<span class="h">07:00</span> <span class="v">Broker kit push</span>
+      <span class="c">→ Generate daily kit từ content queue</span>
+      <span class="c">→ Push vào Telegram broker group</span>
+
+<span class="h">07:15</span> <span class="v">Daily KPI summary → P</span>
+      <span class="c">→ Pull Sheets: leads hôm qua</span>
+      <span class="c">→ List hot leads cần follow-up</span>
+
+<span class="h">08:30</span> <span class="v">Morning FB post (nếu có API)</span>
+<span class="h">19:30</span> <span class="v">Evening FB post</span>
+<span class="h">22:00</span> <span class="v">Inbox sweep: check unanswered leads</span></div>
+          </div>
+          <div class="card">
+            <span class="tag tag-cron">Weekly crons</span>
+            <h3>Việc chạy mỗi tuần</h3>
+            <div class="code-block"><span class="h">Mon 06:00</span> <span class="v">Generate weekly content batch</span>
+           <span class="c">→ 7 days × 8 formats = 56 outputs</span>
+           <span class="c">→ Send batch preview to P</span>
+
+<span class="h">Mon 07:00</span> <span class="v">Weekly brief prep</span>
+           <span class="c">→ Compile market intel từ tuần trước</span>
+           <span class="c">→ Update knowledge base</span>
+
+<span class="h">Fri 17:00</span> <span class="v">Weekly KPI report</span>
+           <span class="c">→ Pull Sheets full week data</span>
+           <span class="c">→ Top hooks, leads, conversions</span>
+           <span class="c">→ Broker leaderboard</span>
+           <span class="c">→ Send report to P Telegram</span>
+
+<span class="h">Fri 17:30</span> <span class="v">Winner playbook update</span>
+           <span class="c">→ Log winning hooks → playbook.md</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEEKLY RHYTHM -->
+    <section class="section alt" id="rhythm">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">7. Vận hành</span>
+          <h2>P làm 4h/tuần — Kasa làm phần còn lại</h2>
+        </div>
+
+        <div class="rhythm-grid">
+          <div class="r-day hi">
+            <span class="dn">T2</span>
+            <strong style="color:var(--purple);">🤖 Generate</strong><br/>
+            Kasa sinh batch 7 ngày<br/>
+            <span style="font-size:10px;color:var(--muted);">P nhận Telegram để duyệt</span>
+          </div>
+          <div class="r-day">
+            <span class="dn">T3</span>
+            <strong style="color:var(--blue);">✅ Review</strong><br/>
+            P duyệt batch<br/>
+            <span style="font-size:10px;color:var(--muted);">Reply ✅ / edit text</span>
+          </div>
+          <div class="r-day">
+            <span class="dn">T4</span>
+            <strong style="color:var(--green);">📡 Auto-post</strong><br/>
+            Cron chạy đúng giờ<br/>
+            <span style="font-size:10px;color:var(--muted);">Kasa monitor inbox</span>
+          </div>
+          <div class="r-day">
+            <span class="dn">T5</span>
+            <strong style="color:var(--green);">📡 Continue</strong><br/>
+            Post tiếp + reply<br/>
+            <span style="font-size:10px;color:var(--muted);">Hot lead alert P</span>
+          </div>
+          <div class="r-day hi">
+            <span class="dn">T6</span>
+            <strong style="color:var(--gold);">📊 Report</strong><br/>
+            Kasa gửi KPI<br/>
+            <span style="font-size:10px;color:var(--muted);">P review + boost winners</span>
+          </div>
+          <div class="r-day">
+            <span class="dn">T7</span>
+            <strong style="color:var(--red);">🚀 Boost</strong><br/>
+            Paid winners<br/>
+            <span style="font-size:10px;color:var(--muted);">Weekend = high traffic</span>
+          </div>
+          <div class="r-day">
+            <span class="dn">CN</span>
+            <strong style="color:var(--cyan);">🧠 Learn</strong><br/>
+            Kasa update playbook<br/>
+            <span style="font-size:10px;color:var(--muted);">Winner hooks logged</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:20px;">
+          <h3>Thời gian P cần bỏ ra mỗi tuần</h3>
+          <div class="card-grid three" style="margin-top:14px;">
+            <div style="text-align:center;">
+              <div style="font-size:38px;font-weight:800;color:var(--green);">90 phút</div>
+              <div style="color:var(--muted);font-size:14px;">T2: Duyệt batch qua Telegram</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:38px;font-weight:800;color:var(--gold);">15 phút/ngày</div>
+              <div style="color:var(--muted);font-size:14px;">Check hot lead alerts + Boost</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:38px;font-weight:800;color:var(--purple);">30 phút</div>
+              <div style="color:var(--muted);font-size:14px;">T6: Review weekly report</div>
+            </div>
+          </div>
+          <p style="margin-top:16px;text-align:center;">
+            <strong>Tổng: ~4h/tuần</strong> — phần còn lại Kasa tự chạy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KPI -->
+    <section class="section" id="kpi">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">8. KPI Dashboard</span>
+          <h2>Kasa báo cáo — không cần Looker Studio</h2>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kn" style="color:var(--blue);">50+</div>
+            <div class="kl">DMs / tuần<br/>Tuần 3 target</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kn" style="color:var(--green);">25+</div>
+            <div class="kl">Qualified leads<br/>Tuần 3 target</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kn" style="color:var(--gold);">15+</div>
+            <div class="kl">Sales handoffs<br/>Tuần 4 target</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kn" style="color:var(--purple);">&lt;150k</div>
+            <div class="kl">CPL (paid ads)<br/>VND / lead</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:20px;">
+          <h3>North Star — duy nhất 1 con số quan trọng</h3>
+          <p style="font-size:22px;color:var(--gold);font-weight:700;text-align:center;margin:16px 0;">
+            Qualified Leads bàn giao Sales mỗi tuần
+          </p>
+          <p style="text-align:center;color:var(--muted);">
+            Kasa track tự động qua Google Sheets. Báo cáo thứ Sáu. Không cần dashboard riêng.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOP 30 NGÀY -->
+    <section class="section alt" id="sop">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">9. SOP 30 ngày</span>
+          <h2>Triển khai OpenClaw-native từ ngày 1</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-num">W0</div>
+            <div>
+              <h3>Setup (1-2 ngày)</h3>
+              <p><strong>Kasa làm:</strong></p>
+              <ul style="margin-top:8px;padding-left:18px;color:var(--muted);line-height:1.9;">
+                <li>Cài <code style="color:var(--gold);">gog</code> skill, kết nối Google Sheets CRM</li>
+                <li>Cài <code style="color:var(--gold);">blogwatcher</code> skill, add RSS feeds khu vực Nhà Bè / Long An</li>
+                <li>Parse toàn bộ PDF tài liệu dự án → <code style="color:var(--gold);">knowledge-base.json</code></li>
+                <li>Tạo content templates cho 8 formats</li>
+                <li>Setup cron jobs (daily + weekly)</li>
+                <li>Tạo 3 auto-reply kits: Buyer / Investor / Broker</li>
+                <li>Setup Telegram broker group (P tạo, Kasa làm admin bot)</li>
+              </ul>
+              <p style="margin-top:10px;"><strong>P làm:</strong> Kết nối Google account cho gog skill (5 phút)</p>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-num">W1</div>
+            <div>
+              <h3>Launch — Nhận diện</h3>
+              <p><strong>Goal:</strong> 10,000 reach, pipeline chạy trơn tru</p>
+              <ul style="margin-top:8px;padding-left:18px;color:var(--muted);line-height:1.9;">
+                <li>Kasa generate batch tuần 1 → P approve qua Telegram</li>
+                <li>Cron broker kit bắt đầu chạy lúc 7h sáng</li>
+                <li>Lead intake: Kasa classify mọi DM, ghi Sheets</li>
+                <li>Test 5 hooks → track trong Sheets Content Performance tab</li>
+                <li>Cuối tuần: Kasa gửi KPI report đầu tiên</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-num">W2</div>
+            <div>
+              <h3>Thuyết phục & Test</h3>
+              <p><strong>Goal:</strong> 50+ saves, 20+ DMs qualified, winners identified</p>
+              <ul style="margin-top:8px;padding-left:18px;color:var(--muted);line-height:1.9;">
+                <li>Content: thị trường, pháp lý, chính sách</li>
+                <li>A/B test: top 3 hooks × 3 CTAs = 9 variants</li>
+                <li>Bắt đầu paid: boost bài save rate > 3%</li>
+                <li>Kasa update winner playbook từ kết quả thực</li>
+                <li>Broker kit #2: thêm objection scripts từ lead thực</li>
+                <li>Kasa gửi broker leaderboard tuần đầu</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-num">W3</div>
+            <div>
+              <h3>Scale & Nurture</h3>
+              <p><strong>Goal:</strong> 25+ qualified leads, retarget pipeline active</p>
+              <ul style="margin-top:8px;padding-left:18px;color:var(--muted);line-height:1.9;">
+                <li>Scale winning formats (Kasa auto-generate nhiều hơn từ best hooks)</li>
+                <li>Nurture: Kasa follow-up DMs chưa reply sau 3 ngày</li>
+                <li>Kasa build lookalike brief cho P setup paid</li>
+                <li>Broker kit #3: case study từ lead thật</li>
+                <li>Kasa report ROI giữa kỳ: chi phí vs kết quả</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-num">W4</div>
+            <div>
+              <h3>Convert & Optimize</h3>
+              <p><strong>Goal:</strong> 15+ sales handoffs, winner playbook hoàn chỉnh</p>
+              <ul style="margin-top:8px;padding-left:18px;color:var(--muted);line-height:1.9;">
+                <li>Heavy CTA content: urgency, scarcity, event invite</li>
+                <li>Kasa push toàn bộ warm leads → sales handoff</li>
+                <li>Compile final playbook: hooks, CTAs, timing, formats</li>
+                <li>Monthly ROI report: đầy đủ pipeline từ A đến E</li>
+                <li><strong>Decision:</strong> Continue same / double down / expand scope</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="section" id="summary">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Tóm tắt</span>
+          <h2>V4 = Một agent, không SaaS dư thừa</h2>
+        </div>
+        <div class="card-grid three">
+          <div class="card" style="border-color:rgba(110,182,255,0.3);">
+            <span style="font-size:32px;">🤖</span>
+            <h3 style="margin-top:10px;">Kasa là trung tâm</h3>
+            <p>Một agent xử lý content, leads, reports, và broker distribution. Không cần workflow nối nhiều tool.</p>
+          </div>
+          <div class="card" style="border-color:rgba(245,200,66,0.3);">
+            <span style="font-size:32px;">📦</span>
+            <h3 style="margin-top:10px;">Skills = superpowers</h3>
+            <p>gog, blogwatcher, và custom skills từ Clawhub mở rộng Kasa mà không thêm subscription mới.</p>
+          </div>
+          <div class="card" style="border-color:rgba(111,219,138,0.3);">
+            <span style="font-size:32px;">⏱</span>
+            <h3 style="margin-top:10px;">Cron = nhân viên 24/7</h3>
+            <p>OpenClaw cron chạy pipeline ngay cả khi P không online. Kasa báo cáo khi cần quyết định.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>AI Marketing Plan V4 — Hiệp Phước Premia × OpenClaw</strong>
+        <p>One agent. Zero extra SaaS. Full pipeline từ content đến lead handoff.</p>
+      </div>
+      <div style="text-align:right;">
+        <strong>Phiên bản</strong>
+        <p>V4.0 — Cập nhật 2026-04-03<br/>
+        <a href="v3.html" style="color:var(--blue);">← Xem V3</a> &nbsp;
+        <a href="index.html" style="color:var(--muted);">← V2</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
